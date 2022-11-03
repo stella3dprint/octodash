@@ -1,0 +1,125 @@
+<div class="job-info" *ngIf="jobStatus.file && isPrinting()">
+  <div class="job-info__progress" *ngIf="!showPreviewWhilePrinting">
+    <round-progress
+      [current]="jobStatus.progress"
+      [max]="100"
+      [stroke]="25"
+      [rounded]="true"
+      [responsive]="true"
+      [color]="'#4bae50'"
+    ></round-progress>
+    <div class="job-info__progress-percentage">{{ jobStatus.progress }}<span style="font-size: 40%">%</span></div>
+  </div>
+
+  <div class="job-info__progress" *ngIf="showPreviewWhilePrinting">
+    <div *ngIf="!useCircularProgressBar()" style="height: 46vw; padding-top: 5.5vw" id="progress-preview-bar">
+      <!-- STELLAMOVE -->
+      <img class="job-info__progress-preview" [src]="thumbnail" alt="" />
+      <div class="job-info__progress-bar__wrapper">
+        <div class="job-info__progress-bar" [style.width]="jobStatus.progress + '%'"></div>
+      </div>
+    </div>
+
+    <div *ngIf="useCircularProgressBar()" style="height: 46vw" id="progress-preview-circle">
+      <round-progress
+        [current]="jobStatus.progress"
+        [max]="100"
+        [stroke]="25"
+        [rounded]="true"
+        [responsive]="true"
+        [color]="'#4bae50'"
+      ></round-progress>
+
+      <div class="job-info__progress-percentage job-info__progress-preview-image-container">
+        <!-- STELLAMOVE -->
+        <img class="job-info__progress-preview-image" [src]="thumbnail" alt="" />
+      </div>
+    </div>
+    <div class="job-info__progress-percentage" [hidden]="true">
+      {{ jobStatus.progress }}<span style="font-size: 40%">%</span>
+    </div>
+  </div>
+
+  <span class="job-info__filename">{{ jobStatus.file }}</span>
+  <br />
+
+  <span class="job-info__time">
+    <!-- STELLAMOVE -->
+    <span *ngIf="hasProperty(jobStatus, 'timeLeft')">
+      <span class="job-info__time-left">{{ jobStatus.timeLeft.value }}</span>
+      {{ jobStatus.timeLeft.unit }}
+      <ng-container i18n="@@job-info__time-left"> left / </ng-container>
+    </span>
+    {{ jobStatus.timePrinted.value }}{{ jobStatus.timePrinted.unit }}
+    <ng-container i18n="@@job-elapsed">elapsed</ng-container>
+  </span>
+</div>
+
+<div class="job-info__file-loaded" *ngIf="jobStatus.file && !isPrinting() && isFileLoaded()">
+  <div class="job-info__preview">
+    <!-- STELLAMOVE -->
+    <img [src]="thumbnail" alt="" class="job-info__preview-image" />
+    <span class="job-info__preview-discard" (click)="discardLoadedFile()" i18n="@@job-discard">discard</span>
+  </div>
+  <br />
+
+  <span
+    (click)="preheat()"
+    matRipple
+    [matRippleUnbounded]="true"
+    [matRippleCentered]="true"
+    class="job-info__actions-item-heat"
+    *ngIf="isPreheatEnabled()"
+  >
+    <!-- STELLAMOVE -->
+    <img src="assets/heat.svg" alt="" class="job-info__actions-item-heat-icon" />
+  </span>
+  <br />
+
+  <span
+    (click)="startJob()"
+    matRipple
+    [matRippleUnbounded]="true"
+    [matRippleCentered]="true"
+    class="job-info__actions-item-print"
+  >
+    <!-- STELLAMOVE -->
+    <img src="assets/print.svg" alt="" class="job-info__actions-item-print-icon" />
+  </span>
+  <br />
+
+  <div class="job-info__print-details">
+    <span class="job-info__filename">{{ jobStatus.file }}</span>
+    <span *ngIf="hasProperty(jobStatus, 'estimatedPrintTime')">
+      <fa-icon [icon]="['fas', 'clock']" class="job-info__print-details-icon"></fa-icon>
+      <!-- STELLAMOVE -->
+      <span class="job-info__print-details-finish-state" i18n="@@will-finish"> finish : </span>
+      <span class="job-info__print-details-value">
+        {{ jobStatus.estimatedPrintTime.value }} {{ jobStatus.estimatedPrintTime.unit }}
+      </span>
+      <br />
+    </span>
+
+    <span *ngIf="hasProperty(jobStatus, 'filamentAmount')">
+      <fa-icon [icon]="['fas', 'dharmachakra']" class="job-info__print-details-icon"></fa-icon>
+      <!-- STELLAMOVE -->
+      <span class="job-info__print-details-finish-state" i18n="@@filament-used"> filament : </span>
+      <span class="job-info__print-details-value">
+        {{ jobStatus.filamentAmount }}
+        <ng-container i18n="@@job-g">g</ng-container>
+      </span>
+    </span>
+  </div>
+</div>
+
+<div
+  class="job-info__no-job loading-dots"
+  *ngIf="(!jobStatus.file && isFileLoaded()) || (!jobStatus && isPrinting())"
+  i18n="@@loading-info"
+>
+  loading info
+</div>
+
+<div class="job-info__no-job" *ngIf="!isFileLoaded() && !isPrinting()" i18n="@@no-job">no job running ...</div>
+
+<span id="jobTogglePreview" (click)="togglePreview()"></span>

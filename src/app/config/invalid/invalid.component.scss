@@ -1,0 +1,38 @@
+.invalid-config {
+  &__top-icon {
+    width: 26vw;
+    display: block;
+    margin-left: calc(50% - 13vw);
+    margin-top: -1vh;
+    margin-bottom: -4vh;
+  }
+
+  &__header {
+    display: block;
+    text-align: center;
+    font-size: 6vw;
+  }
+
+  &__sub-header {
+    text-align: center;
+    font-size: 4vw;
+    display: block;
+  }
+
+  &__error-list {
+    margin-left: 2vw;
+    margin-top: 3vh;
+    list-style-type: disc;
+
+    & li {
+      margin-top: 2vh;
+      font-size: 3.5vw;
+      font-family: 'Cousine', monospace;
+
+      &::before {
+        content: '-';
+        margin-right: 2vw;
+      }
+    }
+  }
+}

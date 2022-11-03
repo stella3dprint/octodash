@@ -1,0 +1,99 @@
+<div class="setup">
+  <table class="top-bar">
+    <tr>
+      <td class="top-bar__back">
+        <div *ngIf="page > 0" (click)="decreasePage()">
+          <!-- STELLAMOVE -->
+          <img src="assets/back.svg" alt="" class="top-bar__back-icon" />
+          <span i18n="@@setup-back">back</span>
+        </div>
+      </td>
+      <td class="top-bar__center">
+        <div class="setup__progress-bar-wrapper">
+          <div class="setup__progress-bar" id="progressBar"></div>
+        </div>
+      </td>
+      <td class="top-bar__next">
+        <div *ngIf="!(this.page === this.totalPages || (this.page === 1 && !this.manualURL))" (click)="increasePage()">
+          <span i18n="@@setup-next">next</span>
+          <!-- STELLAMOVE -->
+          <img src="assets/next.svg" alt="" class="top-bar__next-icon" />
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <app-config-setup-welcome [update]="configUpdate" *ngIf="page === 0"></app-config-setup-welcome>
+
+  <app-config-setup-discover-octoprint
+    (increasePage)="increasePage()"
+    (changeURLEntryMethod)="changeURLEntryMethod($event)"
+    [(octoprintHost)]="config.octoprint.urlSplit.host"
+    [(octoprintPort)]="config.octoprint.urlSplit.port"
+    *ngIf="page === 1"></app-config-setup-discover-octoprint>
+
+  <app-config-setup-octoprint-authentication
+    [octoprintURL]="getOctoprintURL().replace('api/', '')"
+    (increasePage)="increasePage()"
+    [(accessToken)]="config.octoprint.accessToken"
+    *ngIf="page === 2"></app-config-setup-octoprint-authentication>
+
+  <app-config-setup-personalization
+    [octoprintURL]="getOctoprintURL()"
+    [apiKey]="config.octoprint.accessToken"
+    [(printerName)]="config.printer.name"
+    [(useTouchscreen)]="config.octodash.touchscreen"
+    *ngIf="page === 3"></app-config-setup-personalization>
+
+  <app-config-setup-extruder-information
+    [(feedLength)]="config.filament.feedLength"
+    [(feedSpeed)]="config.filament.feedSpeed"
+    *ngIf="page === 4"></app-config-setup-extruder-information>
+
+  <app-config-setup-plugins
+    *ngIf="page === 5"
+    [(displayLayerProgressPlugin)]="config.plugins.displayLayerProgress.enabled"
+    [(enclosurePlugin)]="config.plugins.enclosure.enabled"
+    [(filamentManagerPlugin)]="config.plugins.filamentManager.enabled"
+    [(spoolManagerPlugin)]="config.plugins.spoolManager.enabled"
+    [(preheatButtonPlugin)]="config.plugins.preheatButton.enabled"
+    [(printTimeGeniusPlugin)]="config.plugins.printTimeGenius.enabled"
+    [(psuControlPlugin)]="config.plugins.psuControl.enabled"
+    [(ophomPlugin)]="config.plugins.ophom.enabled"
+    [(tpLinkSmartPlugPlugin)]="config.plugins.tpLinkSmartPlug.enabled"
+    [(tasmotaPlugin)]="config.plugins.tasmota.enabled"
+    [(tasmotaMqttPlugin)]="config.plugins.tasmotaMqtt.enabled"></app-config-setup-plugins>
+
+  <div *ngIf="page === 6">
+    <span class="setup__text" i18n="@@checking">Great! I'll check everything.</span>
+    <div class="setup__validation-check-wrapper">
+      <span class="setup__validation-check">
+        <!-- STELLAMOVE -->
+        <img
+          [src]="octoprintConnection ? 'assets/checkmark.svg' : 'assets/error.svg'"
+          alt=""
+          class="setup__validation-check-icon" />
+        <ng-container i18n="@@checking-octoprint-connection"> OctoPrint Connection </ng-container>
+      </span>
+      <div *ngIf="octoprintConnection">
+        <span class="setup__validation-check">
+          <!-- STELLAMOVE -->
+          <img src="assets/checkmark.svg" alt="" class="setup__validation-check-icon" *ngIf="configValid" />
+          <img src="assets/error.svg" alt="" class="setup__validation-check-icon" *ngIf="!configValid" />
+          <ng-container i18n="@@checking-config"> Validating Config </ng-container>
+        </span>
+      </div>
+      <div *ngIf="configValid">
+        <span class="setup__validation-check">
+          <!-- STELLAMOVE -->
+          <img src="assets/checkmark.svg" alt="" class="setup__validation-check-icon" *ngIf="configSaved === null" />
+          <img src="assets/error.svg" alt="" class="setup__validation-check-icon" *ngIf="configSaved !== null" />
+          <ng-container i18n="@@checking-save"> Saving Config </ng-container>
+        </span>
+        <span class="setup__validation-errors" *ngIf="configSaved">{{ configSaved }}</span>
+      </div>
+      <span class="setup__validation-errors" *ngFor="let error of configErrors">{{ error }}</span>
+      <span *ngIf="configSaved === null" class="setup__button" (click)="finishWizard()" i18n="@@wizard-done">done</span>
+    </div>
+  </div>
+</div>

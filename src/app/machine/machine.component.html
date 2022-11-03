@@ -1,0 +1,177 @@
+<table class="top-bar">
+  <tr>
+    <td class="top-bar__back" routerLink="/main-screen">
+      <span matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+        <img src="assets/back.svg" alt="" class="top-bar__back-icon" />
+        <span i18n="@@machine-back" class="top-bar__back">back</span>
+      </span>
+    </td>
+    <td class="top-bar__center">
+      <img src="assets/move.svg" alt="" class="top-bar__center-icon" />
+    </td>
+    <td class="top-bar__next"></td>
+  </tr>
+</table>
+
+<div class="machine">
+  <div class="machine__jog">
+    <div class="machine__jog-arrows">
+      <div class="machine__jog-arrows__XY">
+        <span i18n="@@machine-jog-xy" class="machine__heading">X / Y</span>
+        <div class="machine__jog-arrows__XY__wrapper">
+          <!-- STELLAMOVE -->
+          <fa-icon
+            [icon]="['fas', 'caret-up']"
+            class="machine__icon machine__icon-xy-up"
+            (click)="moveAxis('y', '+')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+          <fa-icon
+            [icon]="['fas', 'caret-left']"
+            class="machine__icon machine__icon-xy-left"
+            (click)="moveAxis('x', '-')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+          <fa-icon
+            [icon]="['fas', 'caret-right']"
+            class="machine__icon machine__icon-xy-right"
+            (click)="moveAxis('x', '+')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+          <!-- STELLAMOVE -->
+          <fa-icon
+            [icon]="['fas', 'caret-down']"
+            class="machine__icon machine__icon-xy-down"
+            (click)="moveAxis('y', '-')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+          <fa-icon
+            [icon]="['fas', 'square']"
+            class="machine__icon machine__icon-xy-home"
+            (click)="homeAxis('XYZ')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+        </div>
+      </div>
+
+      <div class="machine__jog-arrows--vertical">
+        <span i18n="@@machine-jog-z" class="machine__heading">Z</span>
+        <div class="machine__jog-arrows--vertical__wrapper">
+          <!-- STELLAMOVE -->
+          <fa-icon
+            [icon]="['fas', 'caret-up']"
+            class="machine__icon machine__icon-z-up"
+            (click)="moveAxis('z', '-')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+          <!-- STELLAMOVE -->
+          <fa-icon
+            [icon]="['fas', 'caret-down']"
+            class="machine__icon machine__icon-z-down"
+            (click)="moveAxis('z', '+')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+        </div>
+      </div>
+
+      <div class="machine__jog-arrows--vertical" *ngIf="showExtruder">
+        <span i18n="@@machine-jog-e" class="machine__heading">E</span>
+        <div class="machine__jog-arrows--vertical__wrapper">
+          <!-- STELLAMOVE -->
+          <fa-icon
+            [icon]="['fas', 'caret-up']"
+            class="machine__icon machine__icon-e-up"
+            (click)="extrude('-')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+          <!-- STELLAMOVE -->
+          <fa-icon
+            [icon]="['fas', 'caret-down']"
+            class="machine__icon machine__icon-e-down"
+            (click)="extrude('+')"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+          ></fa-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="machine__distance-wrapper">
+      <table class="machine__distance">
+        <tr>
+          <td
+            class="machine__distance-field"
+            [ngClass]="{ 'machine__distance-field-active': jogDistance === 0.1 }"
+            (click)="setDistance(0.1)"
+          >
+            0.1
+          </td>
+          <td
+            class="machine__distance-field"
+            [ngClass]="{ 'machine__distance-field-active': jogDistance === 1 }"
+            (click)="setDistance(1)"
+          >
+            1
+          </td>
+          <td
+            class="machine__distance-field"
+            [ngClass]="{ 'machine__distance-field-active': jogDistance === 5 }"
+            (click)="setDistance(5)"
+          >
+            5
+          </td>
+          <td
+            class="machine__distance-field"
+            [ngClass]="{ 'machine__distance-field-active': jogDistance === 10 }"
+            (click)="setDistance(10)"
+          >
+            10
+          </td>
+          <td
+            class="machine__distance-field"
+            [ngClass]="{ 'machine__distance-field-active': jogDistance === 50 }"
+            (click)="setDistance(50)"
+          >
+            50
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <table class="machine__bed">
+        <tr>
+          <td matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+            <div class="machine__bed-zalign" (click)="alignZ()">
+              <img src="assets/alignment.svg" alt="" class="machine__bed-icon__zalign"/>
+            </div>
+            <span i18n="@@machine-bed-align" class="machine__heading-bed">Z Align</span>
+          </td>
+          <td matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+            <div class="machine__bed-leveling" (click)="leveling()">
+              <img src="assets/flatness.svg" alt="" class="machine__bed-icon__leveling"/>
+            </div>
+            <span i18n="@@machine-bed-leveling" class="machine__heading-bed">Bed Leveling</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

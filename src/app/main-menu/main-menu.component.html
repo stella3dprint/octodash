@@ -1,0 +1,23 @@
+<div class="main-menu">
+  <!-- STELLAMOVE -->
+  <!--<span class="main-menu__heading">
+    STELLAMOVE<span class="main-menu__heading" style="color: #1ec02c; display: inline">.</span>
+  </span>-->
+  <img src="assets/logo.svg" alt="" class="main-menu__logo" />
+  <img src="assets/settings.svg" alt="" class="main-menu__settings-icon" (click)="showSettings()" />
+  <div class="main-menu__update-notifier" *ngIf="service.updateAvailable"></div>
+  <table class="main-menu__options">
+    <!-- STELLAMOVE -->
+    <tr>
+      <td routerLink="/files" matRipple [matRippleUnbounded]="false" [matRippleCentered]="true">
+        <img src="assets/files.svg" alt="" class="main-menu__option-icon main-menu__option-icon__1" />
+        <ng-container i18n="@@menu-files">files</ng-container>
+      </td>
+      <td routerLink="/machine" matRipple [matRippleUnbounded]="false" [matRippleCentered]="true">
+        <img src="assets/move.svg" alt="" class="main-menu__option-icon main-menu__option-icon__2" />
+        <ng-container i18n="@@menu-move">move</ng-container>
+      </td>
+    </tr>
+  </table>
+</div>
+<app-settings *ngIf="settings" (closeFunction)="hideSettings()"></app-settings>

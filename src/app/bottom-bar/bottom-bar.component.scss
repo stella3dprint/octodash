@@ -1,0 +1,44 @@
+.bottom-bar {
+  position: absolute;
+  bottom: 2.5vh;
+  left: 2.5vw;
+  width: calc(100% - 5vw);
+
+  td {
+    width: 50%;
+  }
+
+  &__enclosure-temperature {
+    text-align: center;
+
+    &-icon {
+      width: 2.5vw;
+      display: inline-block;
+      margin-bottom: -0.8vh;
+      margin-right: 1vw;
+    }
+  }
+
+  &__current-status {
+    text-align: right;
+  }
+
+  &__error {
+    color: #c23616;
+    animation: blinker 2s linear infinite;
+  }
+}
+
+@keyframes blinker {
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,160 @@
+.job-info {
+  height: 55vh;
+  display: block;
+
+  &__no-job {
+    width: 100%;
+    font-size: 6vw;
+    height: 16vh;
+    padding-top: 9vh;
+    text-align: center;
+  }
+
+  &__progress {
+    padding: 5.5vw 10vw 0 22.5vw;
+    width: 52vw;
+    height: 56vw;
+    float: left;
+
+    &-stretch {
+      padding: 3vw 5vw 0 4.5vw;
+    }
+
+    &-percentage {
+      margin-top: -36vw;
+      margin-left: 9vw;
+      font-size: 17vw;
+      text-align: center;
+      width: 34vw;
+    }
+
+    &-preview {
+      width: 42vw;
+      margin-left: 8vw;
+
+      &-image {
+        width: 34vw;
+
+        &-container {
+          margin-top: -36vw;
+          margin-left: 9vw;
+        }
+      }
+    }
+
+    &-bar {
+      height: 3vw;
+      border-radius: 1vw;
+      background-color: #4bae50;
+
+      &__wrapper {
+        width: 42vw;
+        margin: 0.5vw 8vw 0;
+        height: 3vw;
+      }
+    }
+  }
+
+  &__filename {
+    font-size: 6vw;
+    padding-top: 2vh;
+    padding-left: 4vw;
+    display: inline-block;
+    width: 80vw;
+    text-overflow: ellipsis;
+    height: 6vh;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__filament {
+    font-size: 3vw;
+    margin-top: -1.3vh;
+    display: block;
+  }
+
+  &__time {
+    display: inline-block;
+    margin-top: -1.7vh;
+    padding-left: 4vw;
+
+    &-left {
+      font-size: 6vw;
+      font-weight: 500;
+    }
+  }
+
+  &__file-loaded > .job-info__filename {
+    font-size: 5vw;
+  }
+
+  &__preview {
+    width: 45vw;
+    float: left;
+
+    &-image {
+      width: 40vw;
+      margin: 3vh 3vw 0;
+    }
+
+    &-discard {
+      display: block;
+      font-size: 4vw;
+      background-color: rgba(194, 54, 22, 0.85);
+      width: 40vw;
+      text-align: center;
+      padding: 1.5vh 0;
+      border-radius: 0.8vw;
+      margin: 0.5vh auto;
+    }
+  }
+
+  &__actions {
+    &-item {
+      &-heat {
+        float: right;
+        margin: 3vh 7vw 0 0;
+
+        &-disabled {
+          opacity: 0.4;
+        }
+
+        &-icon {
+          width: 12vw;
+        }
+      }
+
+      &-print {
+        float: right;
+        margin: 15vh -10vw 0 0;
+
+        &-icon {
+          width: 13vw;
+        }
+      }
+    }
+  }
+
+  &__print-details {
+    width: 70vw;
+    margin-left: 5vh;
+    margin-top: -12vh;
+    margin-bottom: -1.5vh;
+
+    &-icon {
+      padding-right: 2vw;
+      font-size: 4vw;
+      vertical-align: 0.5vh;
+    }
+
+    &-value {
+      padding-bottom: 2.5vh;
+      display: inline-flex;
+    }
+    // STELLAMOVE
+    &-finish-state {
+      font-size: 4vw;
+      vertical-align: 0.5vh;
+    }
+  }
+}

@@ -1,0 +1,2619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="ko">
+    <body>
+      <trans-unit id="long-init" datatype="html">
+        <source> Initializing is taking longer than usual. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br />"/> Please make sure that OctoPrint is running and that CORS is enabled for the API. </source>
+        <target state="translated"> 초기화가 평소보다 시간이 오래 걸립니다.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br />"/> OctoPrint가 실행 중이고 API에 대해 CORS가 활성화되어 있는지 확인하십시오. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">20,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="initializing" datatype="html">
+        <source>initializing</source>
+        <target state="translated">초기화중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-load-style" datatype="html">
+        <source>Can't load custom styles!</source>
+        <target state="translated">사용자 정의 스타일을 로드할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.service.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-enclosure-temp" datatype="html">
+        <source>Can't retrieve enclosure temperature!</source>
+        <target state="translated">인클로저 온도를 읽을 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/bottom-bar/bottom-bar.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-restart" datatype="html">
+        <source>Please restart your system. If the issue persists open an issue on GitHub.</source>
+        <target state="translated">시스템을 다시 시작하십시오. 문제가 지속되면 GitHub에서 문제를 보고합니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/config.service.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invalid-config" datatype="html">
+        <source>Your config is invalid!</source>
+        <target state="translated">설정이 올바르지 않습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/invalid/invalid.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="correct-errors" datatype="html">
+        <source>Please correct the errors listed below!</source>
+        <target state="translated">아래 나열된 오류를 수정하십시오!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/invalid/invalid.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="select-instance" datatype="html">
+        <source> First things first: Please select your OctoPrint instance from the list below or enter the IP/URL manually.
+</source>
+        <target state="translated"> 가장 먼저 할 일: 아래 목록에서 OctoPrint 인스턴스를 선택하거나 IP/URL을 수동으로 입력하십시오.
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="version-url" datatype="html">
+        <source> Version <x id="INTERPOLATION" equiv-text="{{ node.version }}"/>, URL: <x id="INTERPOLATION_1" equiv-text="{{ node.url }}"/> </source>
+        <target state="translated"> 버전 <x id="INTERPOLATION" equiv-text="{{ node.version }}"/>, URL: <x id="INTERPOLATION_1" equiv-text="{{ node.url }}"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="searching" datatype="html">
+        <source>searching</source>
+        <target state="translated">검색중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="enter-manually" datatype="html">
+        <source>enter manually</source>
+        <target state="translated">수동 입력</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="port-recommendation" datatype="html">
+        <source>Port 5000 for vanilla OctoPrint, Port 80 for OctoPi</source>
+        <target state="translated">Vanilla OctoPrint의 경우 포트 5000, OctoPi의 경우 포트 80</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search-again" datatype="html">
+        <source>search again</source>
+        <target state="translated">재검색</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="connect-localhost" datatype="html">
+        <source>connect to localhost?</source>
+        <target state="translated">localhost에 연결할까요?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-same-machine" datatype="html">
+        <source> are you trying to connect to OctoPrint that is running on the same machine as OctoDash? </source>
+        <target state="translated"> 동일한 시스템에서 실행 중인 OctoPrint에 연결하려고 합니까? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-instance-found" datatype="html">
+        <source>no instances found.</source>
+        <target state="translated">인스턴스가 없습니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/discover-octoprint/discover-octoprint.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-extruder-info" datatype="html">
+        <source>I also need some information about your extruder.</source>
+        <target state="translated">압출기 정보가 필요합니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/extruder-information/extruder-information.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-feed-length" datatype="html">
+        <source>Feed Length:</source>
+        <target state="translated">이송 길이:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/extruder-information/extruder-information.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-info-mm" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/extruder-information/extruder-information.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-feed-speed" datatype="html">
+        <source>Feed Speed:</source>
+        <target state="translated">이송 속도:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/extruder-information/extruder-information.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-info-mms" datatype="html">
+        <source>mm/s</source>
+        <target state="translated">mm/s</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/extruder-information/extruder-information.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-changing-warning" datatype="html">
+        <source> These values are used for filament changing. Make sure to have your feed length (distance extruder to hotend) and feed speed configured correctly. </source>
+        <target state="translated"> 이 값은 필라멘트 교체에 사용됩니다. 이송 길이(압출기에서 핫엔드까지의 거리)와 이송 속도가 올바르게 구성되었는지 확인하십시오. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/extruder-information/extruder-information.component.html</context>
+          <context context-type="linenumber">87,90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-auth" datatype="html">
+        <source> Please authenticate me now. You can either click the button below and confirm the request in your OctoPrint webinterface or enter an API Key manually.
+</source>
+        <target state="translated"> 지금 인증해주세요. 아래 버튼을 클릭하고 OctoPrint 웹 인터페이스에서 요청을 확인하거나 API 키를 수동으로 입력할 수 있습니다.
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.html</context>
+          <context context-type="linenumber">1,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="send-request" datatype="html">
+        <source>send request</source>
+        <target state="translated">요청</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="api-key" datatype="html">
+        <source>API Key:</source>
+        <target state="translated">API 키:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octoprint-connection-failed" datatype="html">
+        <source>Can't connect to OctoPrint!</source>
+        <target state="translated">OctoPrint에 연결할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octoprint-connection-failed-message" datatype="html">
+        <source>Check the URL/IP and make sure that your OctoPrint instance is reachable from this device.</source>
+        <target state="translated">URL/IP를 확인하고 이 장치에서 OctoPrint 인스턴스에 연결할 수 있는지 확인하십시오.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unsupported-autologin" datatype="html">
+        <source>Automatic login not supported!</source>
+        <target state="translated">자동 로그인이 지원되지 않음!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="manually-create-api-key" datatype="html">
+        <source>Please create the API Key manually and paste it in the bottom field.</source>
+        <target state="translated">API 키를 수동으로 생성하여 하단 필드에 붙여넣으십시오.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-request-sent" datatype="html">
+        <source>Login request send!</source>
+        <target state="translated">로그인 요청 전송!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-request-sent-message" datatype="html">
+        <source>Please confirm the request via the popup in the OctoPrint WebUI.</source>
+        <target state="translated">OctoPrint WebUI의 팝업을 통해 요청을 확인하십시오.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/octoprint-authentication/octoprint-authentication.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-customization-details" datatype="html">
+        <source> Now tell me some facts about your setup so I can personalize OctoDash for you. </source>
+        <target state="translated"> 이제 내가 OctoDash를 개인화할 수 있도록 설정에 대한 몇 가지 사실을 알려주세요. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/personalization/personalization.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-printer-name" datatype="html">
+        <source>Printer Name:</source>
+        <target state="translated">프린터 이름:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/personalization/personalization.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="use-touchscreen" datatype="html">
+        <source> Use Touchscreen </source>
+        <target state="translated"> 터치스크린 사용 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/personalization/personalization.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="change-settings-info" datatype="html">
+        <source> You can change all settings (and even more) in the settings menu anytime. There is also a description of each attribute available in the GitHub Wiki.
+</source>
+        <target state="translated"> 언제든지 설정 메뉴에서 모든 설정을 변경할 수 있습니다. GitHub Wiki에서 사용할 수 있는 각 속성에 대한 설명도 있습니다.
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/personalization/personalization.component.html</context>
+          <context context-type="linenumber">13,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prompt-plugins" datatype="html">
+        <source>What plugins are you running?</source>
+        <target state="translated">어떤 플러그인을 실행하고 있습니까?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-display-layer-progress" datatype="html">
+        <source>Display Layer Progress</source>
+        <target state="translated">Display Layer Progress</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-enclosure" datatype="html">
+        <source>Enclosure</source>
+        <target state="translated">Enclosure</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-filament-manager" datatype="html">
+        <source>Filament Manager</source>
+        <target state="translated">Filament Manager</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-spool-manager" datatype="html">
+        <source>Spool Manager (Beta)</source>
+        <target state="translated">Spool Manager (Beta)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-preheat-button" datatype="html">
+        <source>Preheat Button</source>
+        <target state="translated">Preheat Button</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-print-time-genius" datatype="html">
+        <source>Print Time Genius</source>
+        <target state="translated">Print Time Genius</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-psu-control" datatype="html">
+        <source>PSU Control</source>
+        <target state="translated">PSU Control</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-opom" datatype="html">
+        <source>Ophom (Phillips HUE)</source>
+        <target state="translated">Ophom (Phillips HUE)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-tplink-smartplug" datatype="html">
+        <source> TPLink SmartPlug </source>
+        <target state="translated"> TPLink SmartPlug </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-tasmota" datatype="html">
+        <source> Tasmota </source>
+        <target state="translated"> Tasmota </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="plugin-tasmota-mqtt" datatype="html">
+        <source> Tasmota MQTT </source>
+        <target state="translated"> Tasmota MQTT </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/plugins/plugins.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="setup-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="setup-next" datatype="html">
+        <source>next</source>
+        <target state="translated">다음</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checking" datatype="html">
+        <source>Great! I'll check everything.</source>
+        <target state="translated">모든 것을 확인하겠습니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checking-octoprint-connection" datatype="html">
+        <source> OctoPrint Connection </source>
+        <target state="translated"> OctoPrint 연결 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checking-config" datatype="html">
+        <source> Validating Config </source>
+        <target state="translated"> 구성 검증 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checking-save" datatype="html">
+        <source> Saving Config </source>
+        <target state="translated"> 구성 저장 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wizard-done" datatype="html">
+        <source>done</source>
+        <target state="translated">완료</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.html</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="saving-config" datatype="html">
+        <source>saving config</source>
+        <target state="translated">구성 저장중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-403" datatype="html">
+        <source>403 Forbidden - This most likely means that your API Key isn't working.</source>
+        <target state="translated">403 Forbidden - 이것은 아마도 API 키가 작동하지 않는다는 것을 의미합니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-unknown" datatype="html">
+        <source>0 Unknown Error - This most likely means that your OctoPrint host and port aren't correct.</source>
+        <target state="translated">0 알 수 없는 오류 - OctoPrint 호스트와 포트가 올바르지 않음을 의미합니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/setup.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-0" datatype="html">
+        <source>Hey there!</source>
+        <target state="translated">안녕하세요!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-1" datatype="html">
+        <source> It looks like this is the first start of OctoDash. </source>
+        <target state="translated"> 첫 시작입니다. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-2" datatype="html">
+        <source> I'll help you set up your config and get you started. </source>
+        <target state="translated"> 구성을 설정하고 시작할 수 있도록 도와드리겠습니다. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-3" datatype="html">
+        <source> If you encounter any issues please check the troubleshooting guide in the GitHub Wiki. </source>
+        <target state="translated"> 문제가 발생하면 GitHub Wiki에서 문제 해결 가이드를 확인하세요. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-4" datatype="html">
+        <source> Thanks for choosing OctoDash </source>
+        <target state="translated"> 사용해 주셔서 감사합니다. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-5" datatype="html">
+        <source> Sorry for bothering you again ... </source>
+        <target state="translated"> 귀찮게 해서 죄송합니다... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-6" datatype="html">
+        <source> We've released an update, so awesome, we needed to change the config. Please review your new config! </source>
+        <target state="translated"> 업데이트를 출시했습니다. 구성을 변경해야 합니다. 새 구성을 검토하십시오! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcome-7" datatype="html">
+        <source> Thanks for choosing OctoDash </source>
+        <target state="translated"> 사용해 주셔서 감사합니다. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/config/setup/welcome/welcome.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="control-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/control/control.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-profile" datatype="html">
+        <source>Can't retrieve printer profile!</source>
+        <target state="translated">프린터 프로필을 읽을 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/control/control.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="website-loading" datatype="html">
+        <source>loading website ...</source>
+        <target state="translated">웹사이트 로드 중...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/control/custom-actions/custom-actions.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="should-not-happen" datatype="html">
+        <source> That shouldn't happen ... </source>
+        <target state="translated"> 이런 현상이 일어나서는 안됩니다... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/control/custom-actions/custom-actions.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="are-you-sure" datatype="html">
+        <source>are you sure?</source>
+        <target state="translated">실행을 위한 확인</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/control/custom-actions/custom-actions.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="confirm-exec" datatype="html">
+        <source>do you want to execute the following command?</source>
+        <target state="translated">다음 명령을 실행하시겠습니까?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/control/custom-actions/custom-actions.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="load-new-filament" datatype="html">
+        <source>load new filament</source>
+        <target state="translated">새 필라멘트 로드</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="load-new-filament-message" datatype="html">
+        <source>only put a little filament in, I'll pull in the rest.</source>
+        <target state="translated">필라멘트를 조금만 넣으면 나머지는 자동으로 뽑습니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-grams-left" datatype="html">
+        <source>g left</source>
+        <target state="translated">g 남음</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-done" datatype="html">
+        <source> done </source>
+        <target state="translated"> 완료 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-waiting" datatype="html">
+        <source>I'll wait for you.</source>
+        <target state="translated">팝업 메뉴가 표시될때까지 대기</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-m600" datatype="html">
+        <source>M600 sent</source>
+        <target state="translated">M600 전송</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="follow-printer-screen" datatype="html">
+        <source>follow the instructions on your printers' display</source>
+        <target state="translated">필라멘트 교체를 위해 작업을 진행합니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="choose-filament" datatype="html">
+        <source>select your new filament</source>
+        <target state="translated">새 필라멘트 선택</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/choose-filament/choose-filament.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="choose-filament-grams-left" datatype="html">
+        <source>g left</source>
+        <target state="translated">g 남음</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/choose-filament/choose-filament.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-spools" datatype="html">
+        <source>no filament spools found</source>
+        <target state="translated">필라멘트 스풀을 찾을 수 없음</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/choose-filament/choose-filament.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loading-spools" datatype="html">
+        <source>loading spools</source>
+        <target state="translated">스풀 로딩중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/choose-filament/choose-filament.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-back" datatype="html">
+        <source> back </source>
+        <target state="translated"> 이전 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/filament.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-skip" datatype="html">
+        <source> skip </source>
+        <target state="translated"> 다음 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/filament.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nozzle-heating" datatype="html">
+        <source>heating the nozzle</source>
+        <target state="translated">노즐 가열중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/heat-nozzle/heat-nozzle.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nozzle-heating-wait-seconds-or" datatype="html">
+        <source>s wait or</source>
+        <target state="translated">초 대기 또는</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/heat-nozzle/heat-nozzle.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nozzle-heating-start" datatype="html">
+        <source>start</source>
+        <target state="translated">시작</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/heat-nozzle/heat-nozzle.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="move-filament" datatype="html">
+        <source>filament</source>
+        <target state="translated">필라멘트</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/move-filament/move-filament.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="move-filament-speed" datatype="html">
+        <source>mm/s</source>
+        <target state="translated">mm/s</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/move-filament/move-filament.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="move-filament-stop" datatype="html">
+        <source>stop</source>
+        <target state="translated">중지</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/move-filament/move-filament.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loading-filament" datatype="html">
+        <source>loading</source>
+        <target state="translated">로딩중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/move-filament/move-filament.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unloading-filament" datatype="html">
+        <source>unloading</source>
+        <target state="translated">언로딩중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/move-filament/move-filament.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="purging-filament" datatype="html">
+        <source>purging filament</source>
+        <target state="translated">필라멘트 제거</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/purge-filament/purge-filament.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="purging-mm" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/purge-filament/purge-filament.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="puging-10mm" datatype="html">
+        <source>+10mm</source>
+        <target state="translated">+10mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/purge-filament/purge-filament.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="purging-done" datatype="html">
+        <source>done</source>
+        <target state="translated">완료</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/filament/purge-filament/purge-filament.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-top-sort" datatype="html">
+        <source>sort</source>
+        <target state="translated">정렬</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-mb-1" datatype="html">
+        <source>mb</source>
+        <target state="translated">mb</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-mb-2" datatype="html">
+        <source>mb</source>
+        <target state="translated">mb</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-g" datatype="html">
+        <source>g</source>
+        <target state="translated">g</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-h" datatype="html">
+        <source>h</source>
+        <target state="translated">h</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-mb-3" datatype="html">
+        <source>mb</source>
+        <target state="translated">mb</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-h-2" datatype="html">
+        <source>h</source>
+        <target state="translated">h</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-g-2" datatype="html">
+        <source>g</source>
+        <target state="translated">g</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-loading" datatype="html">
+        <source>loading details</source>
+        <target state="translated">세부 정보 로드 중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-sort" datatype="html">
+        <source>sort files</source>
+        <target state="translated">파일 정렬</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-sort-by" datatype="html">
+        <source>sort by</source>
+        <target state="translated">정렬 기준</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-name" datatype="html">
+        <source>Name</source>
+        <target state="translated">이름</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-date" datatype="html">
+        <source>Date</source>
+        <target state="translated">날짜</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-size" datatype="html">
+        <source>Size</source>
+        <target state="translated">크기</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-order" datatype="html">
+        <source>order</source>
+        <target state="translated">순서</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-ascending" datatype="html">
+        <source>Ascending</source>
+        <target state="translated">오름차순</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-descending" datatype="html">
+        <source>Descending</source>
+        <target state="translated">내림차순</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.html</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-load-file-folder" datatype="html">
+        <source>Can't load file/folder!</source>
+        <target state="translated">파일/폴더를 로드할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-load-file" datatype="html">
+        <source>Can't load file!</source>
+        <target state="translated">파일을 로드할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/files/files.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="height-mm" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/height-progress/height-progress.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="heing-layer" datatype="html">
+        <source> Layer </source>
+        <target state="translated"> 레이어 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/height-progress/height-progress.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="height-of" datatype="html">
+        <source> of </source>
+        <target state="translated"> / </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/height-progress/height-progress.component.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="job-filament-g" datatype="html">
+        <source> g Filament </source>
+        <target state="translated"> g 필라멘트 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="job-info__time-left" datatype="html">
+        <source> left / </source>
+        <target state="translated"> 남음 / </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="job-elapsed" datatype="html">
+        <source>elapsed</source>
+        <target state="translated">경과</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="job-discard" datatype="html">
+        <source>discard</source>
+        <target state="translated">취소</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="will-finish" datatype="html">
+        <source> finish : </source>
+        <target state="translated"> 예상 시간 : </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filament-used" datatype="html">
+        <source> filament : </source>
+        <target state="translated"> 예상 필라멘트 : </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="job-g" datatype="html">
+        <source>g</source>
+        <target state="translated">g</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loading-info" datatype="html">
+        <source> loading info
+</source>
+        <target state="translated"> 정보 로딩중
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">116,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-job" datatype="html">
+        <source>no job running ...</source>
+        <target state="translated">실행중인 작업 없음 ...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/job-status/job-status.component.html</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="machine-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="machine-jog-xy" datatype="html">
+        <source>X / Y</source>
+        <target state="translated">X / Y</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="machine-jog-z" datatype="html">
+        <source>Z</source>
+        <target state="translated">Z</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="machine-jog-e" datatype="html">
+        <source>E</source>
+        <target state="translated">E</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="machine-bed-align" datatype="html">
+        <source>Z Align</source>
+        <target state="translated">베드수평</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="machine-bed-leveling" datatype="html">
+        <source>Bed Leveling</source>
+        <target state="translated">베드평탄</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/machine/machine.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu-files" datatype="html">
+        <source>files</source>
+        <target state="translated">파일</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-menu/main-menu.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu-move" datatype="html">
+        <source>move</source>
+        <target state="translated">이동</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-menu/main-menu.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu-config" datatype="html">
+        <source>tool</source>
+        <target state="translated">도구</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-menu/main-menu.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menu-filament" datatype="html">
+        <source>filament</source>
+        <target state="translated">필라멘트</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-menu/main-menu.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no-new-notifications" datatype="html">
+        <source> no new notifications. </source>
+        <target state="translated"> 새 알림이 없습니다. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notification-center/notification-center.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tap-close" datatype="html">
+        <source>tap this card to close it</source>
+        <target state="translated">닫기위해 탭하세요</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/notification/notification.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="control-cancel" datatype="html">
+        <source>cancel</source>
+        <target state="translated">취소</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="control-pause" datatype="html">
+        <source>pause</source>
+        <target state="translated">일시정지</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="control-adjust" datatype="html">
+        <source>tune</source>
+        <target state="translated">조정</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cancel-print" datatype="html">
+        <source>cancel print?</source>
+        <target state="translated">출력을 취소할까요?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cancel-yes" datatype="html">
+        <source>yes</source>
+        <target state="translated">예</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cancel-no" datatype="html">
+        <source>no</source>
+        <target state="translated">아니오</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pause-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="print-pause" datatype="html">
+        <source>print paused</source>
+        <target state="translated">일시정지 중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="print-restart" datatype="html">
+        <source>restart</source>
+        <target state="translated">재출력</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="print-resume" datatype="html">
+        <source>resume</source>
+        <target state="translated">다시시작</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="print-filament" datatype="html">
+        <source>filament</source>
+        <target state="translated">필라멘트</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adjust-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adjust-hotend" datatype="html">
+        <source>Hotend</source>
+        <target state="translated">핫엔드</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adjust-heatbed" datatype="html">
+        <source>Heatbed</source>
+        <target state="translated">핫베드</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adjust-feedrate" datatype="html">
+        <source>Feed Rate</source>
+        <target state="translated">출력속도</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adjust-flowrate" datatype="html">
+        <source>Flow Rate</source>
+        <target state="translated">토출속도</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="offset-mm" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adjust-apply" datatype="html">
+        <source> apply </source>
+        <target state="translated"> 적용 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">184,186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="offset-slow" datatype="html">
+        <source> Slow Speed </source>
+        <target state="translated"> 느린속도 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">184,186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="offset-normal" datatype="html">
+        <source> Normal Speed </source>
+        <target state="translated"> 정상속도 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">184,186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="offset-save" datatype="html">
+        <source> save </source>
+        <target state="translated"> 옵셋저장 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">184,186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="babystep-back" datatype="html">
+        <source>back</source>
+        <target state="translated">이전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="babystep-z" datatype="html">
+        <source>Babystep Z</source>
+        <target state="translated">노즐 베드간 거리</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="babystep-low-warning" datatype="html">
+        <source>The nozzle and the bed are getting closer. Be careful not to scratch the bed.</source>
+        <target state="translated">노즐과 베드 사이가 가까워집니다. 베드가 긁히지 않도록 주의하세요.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="babystep-high-warning" datatype="html">
+        <source>The nozzle and the bed are getting farther away. Be careful about attaching printouts.</source>
+        <target state="translated">노즐과 베드 사이가 멀어집니다. 출력물 안착에 주의하세요.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="babystep-mm" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="babystep-mm-2" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">220</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zoffset-mm" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zoffset-mm-2" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zoffset-mm-3" datatype="html">
+        <source>mm</source>
+        <target state="translated">mm</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
+          <context context-type="linenumber">247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="printer-apply" datatype="html">
+        <source>apply</source>
+        <target state="translated">적용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/printer-status/printer-status.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-set-color" datatype="html">
+        <source>Can't set LED color!</source>
+        <target state="translated">LED 색상을 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-set-output" datatype="html">
+        <source>Can't set output!</source>
+        <target state="translated">출력을 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-run-enclosure-shell" datatype="html">
+        <source>Can't run enclosure shell!</source>
+        <target state="translated">인클로저 쉘을 실행할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-psu-state" datatype="html">
+        <source>Can't change PSU State!</source>
+        <target state="translated">PSU 상태를 변경할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-psu-provider" datatype="html">
+        <source>No provider for PSU Control is configured.</source>
+        <target state="translated">PSU 제어에 대한 공급자가 구성되어 있지 않습니다.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-send-psu-gcode" datatype="html">
+        <source>Can't send GCode!</source>
+        <target state="translated">GCode를 보낼 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-send-ophom-gcode" datatype="html">
+        <source>Can't update Ophom Plug!</source>
+        <target state="translated">Ophom Plug를 업데이트할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-send-smartplug-gcode" datatype="html">
+        <source>Can't send GCode!</source>
+        <target state="translated">GCode를 보낼 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">249</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-send-tasmota-plug" datatype="html">
+        <source>Can't update Tasmota!</source>
+        <target state="translated">Tasmota를 업데이트 할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">272</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-send-tasmota-plug-mqtt" datatype="html">
+        <source>Can't update Tasmota MQTT!</source>
+        <target state="translated">Tasmota를 업데이트 할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/enclosure/enclosure.octoprint.service.ts</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-spools" datatype="html">
+        <source>Can't load filament spools!</source>
+        <target state="translated">필라멘트 스풀을 로드할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/filament/filament.service.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-spool" datatype="html">
+        <source>Can't load active spool!</source>
+        <target state="translated">활성 스풀을 로드할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/filament/filament.service.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-spool-id" datatype="html">
+        <source>Spool IDs didn't match</source>
+        <target state="translated">스풀 ID가 일치하지 않음</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/filament/filament.service.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-change-spool" datatype="html">
+        <source>Can't change spool. Please change spool manually in the OctoPrint UI.</source>
+        <target state="translated">스풀을 변경할 수 없습니다. OctoPrint UI에서 수동으로 스풀을 변경하십시오.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/filament/filament.service.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-set-new-spool" datatype="html">
+        <source>Can't set new spool!</source>
+        <target state="translated">새 스풀을 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/filament/filament.service.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-set-new-spool-2" datatype="html">
+        <source>Can't set new spool!</source>
+        <target state="translated">새 스풀을 설정할 수 없습니다!!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/filament/filament.service.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="local" datatype="html">
+        <source>local</source>
+        <target state="translated">로컬</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/files/files.octoprint.service.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sdcard" datatype="html">
+        <source>sdcard</source>
+        <target state="translated">sd 카드</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/files/files.octoprint.service.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-error-file" datatype="html">
+        <source>Can't load file!</source>
+        <target state="translated">파일을 로드할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/files/files.octoprint.service.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-error-print" datatype="html">
+        <source>Can't start print!</source>
+        <target state="translated">출력을 시작할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/files/files.octoprint.service.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="files-error-delete" datatype="html">
+        <source>Can't delete file!</source>
+        <target state="translated">파일을 삭제할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/files/files.octoprint.service.ts</context>
+          <context context-type="linenumber">200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-start-job" datatype="html">
+        <source>Can't start job!</source>
+        <target state="translated">작업을 시작할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/job/job.octoprint.service.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-pause-job" datatype="html">
+        <source>Can't pause job!</source>
+        <target state="translated">작업을 일시중지할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/job/job.octoprint.service.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-resume-job" datatype="html">
+        <source>Can't resume job!</source>
+        <target state="translated">작업을 재시작할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/job/job.octoprint.service.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-cancel-job" datatype="html">
+        <source>Can't cancel job!</source>
+        <target state="translated">작업을 취소할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/job/job.octoprint.service.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-restart-job" datatype="html">
+        <source>Can't restart job!</source>
+        <target state="translated">작업을 다시 시작할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/job/job.octoprint.service.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-preheat" datatype="html">
+        <source>Can't preheat printer!</source>
+        <target state="translated">예열할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/job/job.octoprint.service.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="printer-error-gcode" datatype="html">
+        <source>Can't send GCode!</source>
+        <target state="translated">GCode를 보낼 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="printer-error-relase" datatype="html">
+        <source>Can't Release SD Card!</source>
+        <target state="translated">SD 카드를 해제할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="printer-error-init" datatype="html">
+        <source>Can't Initialize SD Card!</source>
+        <target state="translated">SD 카드를 초기화할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="printer-error-refresh" datatype="html">
+        <source>Can't Refresh SD Card!</source>
+        <target state="translated">SD 카드를 갱신할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-head" datatype="html">
+        <source>Can't move Printhead!</source>
+        <target state="translated">헤드를 움직일 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-extrude" datatype="html">
+        <source>Can't extrude Filament!</source>
+        <target state="translated">필라멘트를 토출할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-hotend" datatype="html">
+        <source>Can't set Hotend Temperature!</source>
+        <target state="translated">핫앤드 온도를 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-bed" datatype="html">
+        <source>Can't set Bed Temperature!</source>
+        <target state="translated">베드 온도를 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-feedrate" datatype="html">
+        <source>Can't set Feedrate!</source>
+        <target state="translated">Feedrate을 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-flowrate" datatype="html">
+        <source>Can't set Flowrate!</source>
+        <target state="translated">Flowrate을 설정할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-printer-disconnect" datatype="html">
+        <source>Can't disconnect Printer!</source>
+        <target state="translated">프린터에 연결해제할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/printer/printer.octoprint.service.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="http-403-heading" datatype="html">
+        <source>HTTP Error 403 - FORBIDDEN</source>
+        <target state="translated">HTTP Error 403 - FORBIDDEN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="http-403-text" datatype="html">
+        <source>This most likely means that your API Key is invalid. Please update the API Key and restart your system.</source>
+        <target state="translated">API 키가 유효하지 않음을 의미할 가능성이 큽니다. API 키를 업데이트하고 시스템을 다시 시작하십시오.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="http-unknown-heading" datatype="html">
+        <source>Unknown HTTP Error</source>
+        <target state="translated">Unknown HTTP Error</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unit-h-1" datatype="html">
+        <source>h</source>
+        <target state="translated">h</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">275</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unit-h-2" datatype="html">
+        <source>h</source>
+        <target state="translated">h</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unit-h-3" datatype="html">
+        <source>h</source>
+        <target state="translated">h</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">293</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="printer-error" datatype="html">
+        <source>Printer error</source>
+        <target state="translated">프린터 오류</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">353</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="action-required" datatype="html">
+        <source>Action required</source>
+        <target state="translated">작업이 필요합니다</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">379</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-pause" datatype="html">
+        <source>Paused</source>
+        <target state="translated">일시정지 중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">385</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-resume" datatype="html">
+        <source>Resuming</source>
+        <target state="translated">다시 시작중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-reheat-timeout" datatype="html">
+        <source>Need reheat</source>
+        <target state="translated">필라멘트 교체를 위해 재가열 필요</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-reheat-reheating" datatype="html">
+        <source>Reheating</source>
+        <target state="translated">필라멘트 교체를 위해 재가열중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-reheat-done" datatype="html">
+        <source>Reheat Done</source>
+        <target state="translated">필라멘트 교체를 위한 재가열 완료</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-change" datatype="html">
+        <source>Wait for filament changing</source>
+        <target state="translated">필라멘트 교체를 위해 대기</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socket-insert" datatype="html">
+        <source>Insert filament and press button to continue</source>
+        <target state="translated">필라멘트 교체 후 버튼을 누르세요</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">388</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-answer-prompt" datatype="html">
+        <source>Can't answer prompt!</source>
+        <target state="translated">Prompt에 응답할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/socket/socket.octoprint.service.ts</context>
+          <context context-type="linenumber">404</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-execute" datatype="html">
+        <source>Can't execute <x id="PH" equiv-text="command"/> command!</source>
+        <target state="translated"><x id="PH" equiv-text="command"/> 명령을 실행할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/system/system.octoprint.service.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-connect" datatype="html">
+        <source>Can't connect to printer!</source>
+        <target state="translated">프린터에 연결할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/system/system.octoprint.service.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings" datatype="html">
+        <source>settings</source>
+        <target state="translated">설정</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-general" datatype="html">
+        <source>general</source>
+        <target state="translated">일반</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-ui" datatype="html">
+        <source>ui</source>
+        <target state="translated">사용자인터페이스</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-plugins" datatype="html">
+        <source>plugins</source>
+        <target state="translated">플러그인</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">470</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-about" datatype="html">
+        <source>about</source>
+        <target state="translated">소개</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-available" datatype="html">
+        <source> update available! </source>
+        <target state="translated"> 업데이트 가능! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-save" datatype="html">
+        <source>save</source>
+        <target state="translated">저장</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-general-menu" datatype="html">
+        <source>general</source>
+        <target state="translated">일반</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-octoprint-connection" datatype="html">
+        <source>OctoPrint Connection</source>
+        <target state="translated">Octoprint 연결</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-octoprint-url" datatype="html">
+        <source>Octoprint URL</source>
+        <target state="translated">Octoprint URL</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-printer" datatype="html">
+        <source>Printer</source>
+        <target state="translated">프린터</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-name" datatype="html">
+        <source>Name</source>
+        <target state="translated">이름</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-xyspeed" datatype="html">
+        <source>XY-Speed (mm/s)</source>
+        <target state="translated">XY 속도(mm/s)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-zspeed" datatype="html">
+        <source>Z-Speed (mm/s)</source>
+        <target state="translated">Z 속도 (mm/s)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-default" datatype="html">
+        <source> Default Temperatures &amp; Fan Speed </source>
+        <target state="translated"> 기본 온도 및 팬 속도 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">109,111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="default-hotend" datatype="html">
+        <source> Hotend <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(°C)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 핫앤드 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(°C)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">115,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="default-heatbed" datatype="html">
+        <source> Heatbed <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(°C)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 핫베드 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(°C)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">129,131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="default-feed" datatype="html">
+        <source> Feed Rate <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(%)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 출력 속도 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(%)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">145,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="default-flow" datatype="html">
+        <source> Flow Rate <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(%)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 토출 속도 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(%)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">145,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="default-fanspeed" datatype="html">
+        <source> Fan Speed <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(%)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 팬 속도 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(%)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">145,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-filament" datatype="html">
+        <source>Filament</source>
+        <target state="translated">필라멘트</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-m600" datatype="html">
+        <source>Use M600 to change Filament</source>
+        <target state="translated">M600을 사용하여 필라멘트 교체</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-feedlength" datatype="html">
+        <source> Feed Length <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 이송 길이 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">178,180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-purge-distance" datatype="html">
+        <source> Purge Distance <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 청소 길이 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">193,195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-feedrate" datatype="html">
+        <source> Feed Speed <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm/s)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 이송 속도 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm/s)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">210,212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-feedrate-slow" datatype="html">
+        <source> Feed Speed Slow <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm/s)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 저속 이송 속도 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm/s)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">225,227</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-thickness" datatype="html">
+        <source> Thickness <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 두께 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(mm)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">242,244</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-density" datatype="html">
+        <source> Density <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(g/cm³)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> 밀도 <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(g/cm³)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">256,258</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="general-warning" datatype="html">
+        <source> Please set these values carefully, as they possibly can destroy parts of your printer, just don't set your Feed Speed to high and your Feed Length to long. </source>
+        <target state="translated"> 이 값은 프린터의 일부를 손상시킬 수 있으므로 신중하게 설정하십시오. 이송 속도를 높게, 이송 길이를 너무 길게 설정하지 마십시오. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">271,274</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octodash-general" datatype="html">
+        <source>General</source>
+        <target state="translated">일반</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="show-extruder" datatype="html">
+        <source>Show extruder controls</source>
+        <target state="translated">압출기 컨트롤 표시</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">292</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="show-noti" datatype="html">
+        <source>Show icon for Notification Center</source>
+        <target state="translated">알림 센터 아이콘 표시</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">301</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="screen-off" datatype="html">
+        <source>Turn screen off while sleeping</source>
+        <target state="translated">절전모드시 화면 끔</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">310</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="turn-on-after-sleep" datatype="html">
+        <source>Turn on printer when exiting sleep</source>
+        <target state="translated">절전모드에서 나올때 기기 전원 킴</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">340</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="default-preview" datatype="html">
+        <source>Preview by default while printing</source>
+        <target state="translated">인쇄하는 동안 미리보기</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">351</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="always-circular" datatype="html">
+        <source>Always use circular progress bar</source>
+        <target state="translated">원형 진행률 표시줄 사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">361</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="invert-axis-control" datatype="html">
+        <source>Invert Axis Control</source>
+        <target state="translated">축 제어 반전</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">364</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octodash-custom" datatype="html">
+        <source>Custom Actions</source>
+        <target state="translated">사용자정의 도구</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">390</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octodash-gcode" datatype="html">
+        <source>GCode / Action</source>
+        <target state="translated">GCode / Action</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">393</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="action-icon" datatype="html">
+        <source>Icon</source>
+        <target state="translated">아이콘</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">405</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="action-color" datatype="html">
+        <source>Color</source>
+        <target state="translated">색상</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">416</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="action-confirm" datatype="html">
+        <source>Confirm</source>
+        <target state="translated">확인</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">445</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="action-home" datatype="html">
+        <source>Return to Home</source>
+        <target state="translated">홈</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">458</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-display-layer-progress" datatype="html">
+        <source>Display Layer Progress</source>
+        <target state="translated">Display Layer Progress</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">473</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-display-layer-progress-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">480</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-enclosure" datatype="html">
+        <source>Enclosure</source>
+        <target state="translated">Enclosure</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">482</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-enclosure-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">489</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-ambiant-sensor" datatype="html">
+        <source> Ambient Sensor <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(ID)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source>
+        <target state="translated"> Ambient Sensor <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(ID)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">491,493</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-filament-manager" datatype="html">
+        <source>Filament Manager</source>
+        <target state="translated">Filament Manager</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">505</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-filament-manager-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">512</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-spool-manager" datatype="html">
+        <source>Spool Manager (Beta)</source>
+        <target state="translated">Spool Manager (Beta)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">515</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-spool-manager-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">522</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-preheat-button" datatype="html">
+        <source>Preheat Button</source>
+        <target state="translated">Preheat Button</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">525</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-preheat-button-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">532</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-print-time-genius" datatype="html">
+        <source>Print Time Genius</source>
+        <target state="translated">Print Time Genius</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">534</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-print-time-genius-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">541</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-psu-control" datatype="html">
+        <source>PSU Control</source>
+        <target state="translated">PSU Control</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">543</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-psu-control-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">550</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-ophom-control" datatype="html">
+        <source>Ophon Control (Phillips HUE)</source>
+        <target state="translated">Ophon Control (Phillips HUE)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">552</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-ophom-control-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">559</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-tplink-smartplug" datatype="html">
+        <source>TPLink-SmartPlug</source>
+        <target state="translated">TPLink-SmartPlug</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">561</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-tplink-smartplug-enabled" datatype="html">
+        <source>enabled</source>
+        <target state="translated">사용</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">568</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="settings-tplink-smartplug-ip" datatype="html">
+        <source>SmartPlug IP</source>
+        <target state="translated">SmartPlug IP</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">571</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about" datatype="html">
+        <source>about</source>
+        <target state="translated">소개</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">643</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-no-update" datatype="html">
+        <source> no update available </source>
+        <target state="translated"> 업데이트 없음 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">651,653</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-install-v" datatype="html">
+        <source> install v<x id="INTERPOLATION" equiv-text="{{ service.latestVersion }}"/> </source>
+        <target state="translated"> v<x id="INTERPOLATION" equiv-text="{{ service.latestVersion }}"/> 설치 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">658,660</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="licence" datatype="html">
+        <source>License</source>
+        <target state="translated">라이센스</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">662</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about-icons" datatype="html">
+        <source>Icons</source>
+        <target state="translated">아이콘</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">673</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="special-thanks" datatype="html">
+        <source>Special Thanks</source>
+        <target state="translated">감사</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">703</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="special-thanks-message" datatype="html">
+        <source> Special Thanks to /u/Slateclean for supplying touchscreens, so development can continue! </source>
+        <target state="translated"> 특별히 개발을 계속할 수 있도록 터치스크린을 제공한 Slateclean에 감사드립니다! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.html</context>
+          <context context-type="linenumber">704,706</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="top-left" datatype="html">
+        <source>Top Left</source>
+        <target state="translated">상단 좌측</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="top-right" datatype="html">
+        <source>Top Right</source>
+        <target state="translated">상단 우측</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="middle-left" datatype="html">
+        <source>Middle Left</source>
+        <target state="translated">중간 좌측</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="middle-right" datatype="html">
+        <source>Middle Right</source>
+        <target state="translated">중간 우측</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bottom-left" datatype="html">
+        <source>Bottom Left</source>
+        <target state="translated">하단 좌측</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bottom-right" datatype="html">
+        <source>Bottom Right</source>
+        <target state="translated">하단 우측</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="conf-unsaved" datatype="html">
+        <source>Configuration not saved!</source>
+        <target state="translated">구성 저장 실패!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="conf-unsaved-message" datatype="html">
+        <source>You haven't saved your config yet, so your changes will not be applied. Click close again if you want to discard your changes!</source>
+        <target state="translated">아직 구성을 저장하지 않았으므로 변경 사항이 적용되지 않습니다. 변경 사항을 취소하려면 닫기를 다시 클릭하십시오!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-invalid-config" datatype="html">
+        <source>Can't save invalid config</source>
+        <target state="translated">올바르지 않은 설정을 저장할 수 없습니다</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/settings/settings.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octoprint-sleeping" datatype="html">
+        <source>Shhh! OctoDash is sleeping.</source>
+        <target state="translated">연결 대기중.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/standby/standby.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="octoprint-sleeping-message" datatype="html">
+        <source>Press on the screen to wake me up again.</source>
+        <target state="translated">연결을 위해 화면을 누르세요.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/standby/standby.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="connecting" datatype="html">
+        <source>connecting</source>
+        <target state="translated">연결중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/standby/standby.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="connection-failed" datatype="html">
+        <source> Connection can't be established. Press screen to try again. </source>
+        <target state="translated"> 연결할 수 없습니다. 다시 시도하려면 화면을 누르세요. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/standby/standby.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="downloading-update" datatype="html">
+        <source>downloading update</source>
+        <target state="translated">업데이트를 다운로딩중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mbs" datatype="html">
+        <source> MB/s  </source>
+        <target state="translated"> MB/s  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-mb" datatype="html">
+        <source>MB</source>
+        <target state="translated">MB</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-minutes-left" datatype="html">
+        <source>minutes left</source>
+        <target state="translated">분 남음</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="installing-update" datatype="html">
+        <source>installing update</source>
+        <target state="translated">업데이트 설치중</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-wait" datatype="html">
+        <source>this might take a while</source>
+        <target state="translated">시간이 좀 걸릴 수 있습니다</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-confirmation" datatype="html">
+        <source>v<x id="INTERPOLATION" equiv-text="{{ service.latestVersion }}"/> installed</source>
+        <target state="translated">v<x id="INTERPOLATION" equiv-text="{{ service.latestVersion }}"/> 설치완료</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="update-reboot" datatype="html">
+        <source>would you like to reboot now to activate the latest version?</source>
+        <target state="translated">최신 버전을 사용하기 위해 재부팅하시겠습니까?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reboot-no" datatype="html">
+        <source> no </source>
+        <target state="translated"> 아뇨 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reboot-yes" datatype="html">
+        <source> yes </source>
+        <target state="translated"> 예 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-update" datatype="html">
+        <source>Can't initiate update!</source>
+        <target state="translated">업데이트를 시작할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-update-message" datatype="html">
+        <source>Some information is missing, please try again in an hour or update manually.</source>
+        <target state="translated">일부 정보가 누락되었습니다. 1시간 안에 다시 시도하거나 수동으로 업데이트하십시오.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="error-install-update" datatype="html">
+        <source>Can't install update!</source>
+        <target state="translated">업데이트할 수 없습니다!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/update/update.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

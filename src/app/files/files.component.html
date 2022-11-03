@@ -1,0 +1,214 @@
+<table class="top-bar">
+  <tr>
+    <td class="top-bar__back" routerLink="/main-screen" matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+      <!-- STELLAMOVE -->
+      <img src="assets/back.svg" alt="" class="top-bar__back-icon" />
+      <ng-container i18n="@@files-back">back</ng-container>
+    </td>
+    <td class="top-bar__center">
+      <!-- STELLAMOVE -->
+      <img src="assets/folder.svg" alt="" class="top-bar__center-icon" />
+    </td>
+    <td class="top-bar__next" (click)="openSorting()" matRipple [matRippleUnbounded]="true" [matRippleCentered]="true" *ngIf="directory">
+      <ng-container i18n="@@files-top-sort">sort</ng-container>
+      <!-- STELLAMOVE -->
+      <img src="assets/sort.svg" alt="" class="top-bar__next-icon" />
+    </td>
+    <td class="top-bar__next" *ngIf="directory"></td>
+  </tr>
+</table>
+
+<div class="breadcrumbs">
+  <span class="breadcrumbs__item" *ngFor="let folder of currentFolder.split('/')">
+    <span (click)="openFolder(currentFolder.split(folder)[0] + folder)">
+      {{ folder }}
+    </span>
+  </span>
+</div>
+
+<div class="files" *ngIf="loading !== 0">
+  <ng-lottie id="loadingAnimation" [options]="loadingOptions"></ng-lottie>
+</div>
+
+<div class="files" *ngIf="loading === 0">
+  <div
+    *ngIf="!directory || (directory.files?.length === 0 && directory.folders?.length === 0); else fileList"
+    class="files__error"
+  >
+    can't load files ...
+  </div>
+
+  <ng-template #fileList>
+    <div>
+      <div *ngIf="currentFolder !== homeFolder && currentFolder !== ''" class="files__object">
+        <div
+          (click)="openFolder(currentFolder.substr(0, currentFolder.lastIndexOf('/')))"
+          matRipple
+          [matRippleUnbounded]="false"
+        >
+          <!-- STELLAMOVE -->
+          <img src="assets/folder.svg" alt="" class="files__icon" />
+          <span class="files__name">..</span>
+        </div>
+      </div>
+
+      <div
+        (click)="openFolder(folder.path)"
+        matRipple
+        [matRippleUnbounded]="false"
+        *ngFor="let folder of directory.folders"
+        class="files__object"
+      >
+        <!-- STELLAMOVE -->
+        <img src="assets/folder.svg" alt="" class="files__icon" />
+        <div class="files__info">
+          <span class="files__info-value">
+            {{ folder.size }}
+            <span class="files__info-unit" *ngIf="folder.size !== undefined" i18n="@@files-mb-1">mb</span>
+          </span>
+        </div>
+        <span class="files__name">
+          {{ folder.name }}
+        </span>
+      </div>
+
+      <div
+        *ngFor="let file of directory.files"
+        (click)="openDetails(file.path)"
+        (press)="loadFile(file.path)"
+        matRipple
+        [matRippleUnbounded]="false"
+        class="files__object"
+        [ngClass]="[file.successful]"
+      >
+        <!-- STELLAMOVE -->
+        <img [src]="file.thumbnail" alt="" class="files__icon" />
+        <div class="files__info">
+          <span class="files__info-value">
+            {{ file.size }}<span class="files__info-unit" i18n="@@files-mb-2">mb</span>
+          </span>
+          <span class="files__info-value" *ngIf="file.hasOwnProperty('filamentWeight')">
+            {{ file.filamentWeight }}<span class="files__info-unit" i18n="@@files-g">g</span>
+          </span>
+          <span class="files__info-value" *ngIf="file.hasOwnProperty('printTime')">
+            {{ file.printTime }}<span class="files__info-unit" i18n="@@files-h">h</span>
+          </span>
+        </div>
+        <span class="files__name">
+          {{ file.name }}
+        </span>
+      </div>
+    </div>
+    <div class="scroll__thumb-inactive"></div>
+  </ng-template>
+</div>
+
+<div class="file" id="fileDetailView" (click)="closeDetails()">
+  <div class="file__wrapper" *ngIf="fileDetail && fileDetail.name !== 'error'" (click)="stopPropagation($event)">
+    <!-- STELLAMOVE -->
+    <img src="assets/error.svg" alt="" class="file__close" (click)="closeDetails()" />
+    <span class="file__name">{{ fileDetail.name }}</span>
+    <span class="file__directory">{{ fileDetail.path }}</span>
+    <span class="file__creation-date" *ngIf="fileDetail.hasOwnProperty('date')">{{ fileDetail.date }}</span>
+    <!-- STELLAMOVE -->
+    <img [src]="fileDetail.thumbnail" alt="" class="file__render" />
+    <table class="file__details">
+      <tr>
+        <td>{{ fileDetail.size }}<span class="file__details-name" i18n="@@files-mb-3">mb</span></td>
+        <td *ngIf="fileDetail.hasOwnProperty('printTime')">
+          {{ fileDetail.printTime }}<span class="file__details-name" i18n="@@files-h-2">h</span>
+        </td>
+        <td *ngIf="fileDetail.hasOwnProperty('filamentWeight')">
+          {{ fileDetail.filamentWeight }}<span class="file__details-name" i18n="@@files-g-2">g</span>
+        </td>
+      </tr>
+    </table>
+    <table class="file__actions">
+      <tr>
+        <td>
+          <span matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+            <!-- STELLAMOVE -->
+            <img src="assets/upload.svg" alt="" class="file__actions-icon" (click)="loadFile(fileDetail.path)" />
+          </span>
+        </td>
+        <td>
+          <span matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+            <!-- STELLAMOVE -->
+            <img src="assets/print.svg" alt="" class="file__actions-icon" (click)="printFile(fileDetail.path)" />
+          </span>
+        </td>
+        <td>
+          <span matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+            <!-- STELLAMOVE -->
+            <img src="assets/delete.svg" alt="" class="file__actions-icon" (click)="deleteFile(fileDetail.path)" />
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="file__wrapper file__loading" *ngIf="!fileDetail">
+    <!-- STELLAMOVE -->
+    <img src="assets/error.svg" alt="" class="file__close" (click)="closeDetails()" />
+    <span class="loading-dots" i18n="@@files-loading">loading details</span>
+  </div>
+  <div class="file__wrapper file__loading" *ngIf="fileDetail && fileDetail.name === 'error'">
+    <!-- STELLAMOVE -->
+    <img src="assets/error.svg" alt="" class="file__close" (click)="closeDetails()" />
+    can't load file.
+  </div>
+</div>
+
+<div class="sorting" id="sortingView" *ngIf="showSorting" (click)="closeSorting()">
+  <div class="sorting-wrapper" (click)="stopPropagation($event)">
+    <!-- STELLAMOVE -->
+    <img src="assets/cancel.svg" alt="" class="sorting-close" (click)="closeSorting()" />
+    <span class="sorting-heading" i18n="@@files-sort">sort files</span>
+    <table class="sorting-selection">
+      <tr>
+        <td>
+          <span style="font-size: 4.5vw" i18n="@@files-sort-by">sort by</span>
+          <br />
+          <div class="sorting__checkbox-container" (click)="setSortAttribute('name')">
+            <span class="sorting__checkbox">
+              <span class="sorting__checkbox-checked" *ngIf="sortingAttribute === 'name'"></span>
+            </span>
+            <span class="sorting__checkbox-descriptor" i18n="@@files-name">Name</span>
+          </div>
+          <br />
+          <div class="sorting__checkbox-container" (click)="setSortAttribute('date')">
+            <span class="sorting__checkbox">
+              <span class="sorting__checkbox-checked" *ngIf="sortingAttribute === 'date'"></span>
+            </span>
+            <span class="sorting__checkbox-descriptor" i18n="@@files-date">Date</span>
+          </div>
+          <br />
+          <div class="sorting__checkbox-container" (click)="setSortAttribute('size')">
+            <span class="sorting__checkbox">
+              <span class="sorting__checkbox-checked" *ngIf="sortingAttribute === 'size'"></span>
+            </span>
+            <span class="sorting__checkbox-descriptor" i18n="@@files-size">Size</span>
+          </div>
+          <br />
+        </td>
+        <td>
+          <span style="font-size: 4.5vw" i18n="@@files-order">order</span>
+          <br />
+          <div class="sorting__checkbox-container" (click)="setSortOrder('asc')">
+            <span class="sorting__checkbox">
+              <span class="sorting__checkbox-checked" *ngIf="sortingOrder === 'asc'"></span>
+            </span>
+            <span class="sorting__checkbox-descriptor" i18n="@@files-ascending">Ascending</span>
+          </div>
+          <br />
+          <div class="sorting__checkbox-container" (click)="setSortOrder('dsc')">
+            <span class="sorting__checkbox">
+              <span class="sorting__checkbox-checked" *ngIf="sortingOrder === 'dsc'"></span>
+            </span>
+            <span class="sorting__checkbox-descriptor" i18n="@@files-descending">Descending</span>
+          </div>
+          <br />
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

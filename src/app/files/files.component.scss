@@ -1,0 +1,366 @@
+// STELLAMOVE
+.breadcrumbs {
+  display: block;
+  margin-left: 3vw;
+  margin-top: -0.5vh;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 94vw;
+
+  &__item {
+    font-size: 4.2vw;
+
+    & span {
+      font-size: 4.2vw;
+    }
+
+    &::before {
+      content: '/';
+      padding: 0 0.9vw;
+      pointer-events: none;
+    }
+
+    &:first-of-type {
+      &::before {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}
+
+// STELLAMOVE
+.files {
+  display: block;
+  width: 95vw;
+  height: 70vh;
+  margin-left: 2.5vw;
+  margin-top: 0.5vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    width: 91vw;
+    height: 73vh;
+    position: fixed;
+    left: 2vw;
+    top: 16vh;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(#353b48, transparent 6%, transparent 94%, #353b48);
+  }
+
+  &__error {
+    text-align: center;
+    margin-top: 20vh;
+  }
+
+  &__object {
+    width: 90vw;
+    background-color: #718093;
+    border-radius: 1vw;
+    height: 11vh;
+    line-height: 11vh;
+    margin-bottom: 2vh;
+    border-left: .2em solid transparent;
+
+    &:first-of-type {
+      margin-top: 3.5vh;
+    }
+
+    &:last-of-type {
+      margin-bottom: 5.5vh;
+    }
+
+    &--success {
+      border-left-color: #44bd32;
+    }
+
+    &--failed {
+      border-left-color: #e84118;
+    }
+
+    &--unknown {
+      border-left-color: #f5f6fa;
+    }
+  }
+
+  // STELLAMOVE
+  &__name {
+    font-size: 5.2vw;
+    height: 11vh;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    margin-left: 9vw;
+  }
+
+  &__icon {
+    height: 9vh;
+    margin: 1vh 1.2vw 0;
+    display: block;
+    float: left;
+  }
+
+  &__info {
+    float: right;
+    padding-left: 0.7vw;
+    line-height: 6vw;
+
+    &-unit {
+      font-weight: 400;
+      font-size: 2vw;
+      padding-left: 0.5vw;
+      padding-right: 1.5vw;
+    }
+
+    &-value {
+      font-size: 3.2vw;
+      font-weight: 500;
+    }
+  }
+}
+
+.file {
+  opacity: 0;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: opacity 0.4s ease-in-out;
+  z-index: 5;
+
+  // STELLAMOVE
+  &__close {
+    position: absolute;
+    right: 3.5vw;
+    top: 2vh;
+    width: 9vw;
+  }
+
+  // STELLAMOVE
+  &__wrapper {
+    position: fixed;
+    left: 5vw;
+    top: 8vh;
+    width: 85vw;
+    height: 80vh;
+    background-color: #353b48;
+    z-index: 10;
+    border-radius: 2vw;
+    padding: 2vh 2.5vw;
+    box-shadow: 8px 4px 18px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  &__loading {
+    text-align: center;
+    padding-top: 30vh;
+    height: 50vh;
+  }
+
+  &__name {
+    display: block;
+    font-size: 6vw;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 72vw;
+  }
+
+  // STELLAMOVE
+  &__directory {
+    display: block;
+    font-size: 3vw;
+    margin-bottom: 0.5vh;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // STELLAMOVE
+  &__creation-date {
+    display: block;
+    font-size: 3vw;
+  }
+
+  &__render {
+    height: 30vh;
+    margin: 3.5vh auto 2.5vh;
+    display: block;
+  }
+
+  &__details {
+    width: 90%;
+    margin-left: 5%;
+
+    & td {
+      width: 33.3%;
+      text-align: center;
+      font-size: 5vw;
+      font-weight: 500;
+
+      &:first-of-type:not(:only-of-type) {
+        text-align: left;
+      }
+
+      &:last-of-type:not(:only-of-type) {
+        text-align: right;
+      }
+    }
+
+    &-name {
+      font-size: 4vw;
+    }
+  }
+
+  &__actions {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1vh;
+
+    & td {
+      width: 33.3%;
+      text-align: center;
+
+      // STELLAMOVE
+      & span {
+        position: absolute;
+        margin-left: -14vw;
+      }
+
+      &:first-of-type {
+        text-align: left;
+
+        // STELLAMOVE
+        & span {
+          margin-top: 4vh;
+          position: absolute;
+          margin-left: -3vw;
+        }
+
+        & img {
+          height: 10vh;
+        }
+      }
+
+      &:last-of-type {
+        text-align: right;
+
+        // STELLAMOVE
+        & span {
+          margin-top: 3.5vh;
+          position: absolute;
+          margin-left: -13vw;
+        }
+
+        & img {
+          height: 10vh;
+        }
+      }
+    }
+
+    & img {
+      height: 17vh;
+    }
+  }
+}
+
+.sorting {
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.85);
+  // backdrop-filter: blur(8px);
+  transition: opacity 0.4s ease-in-out;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  z-index: 10;
+
+  &-close {
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    width: 6vw;
+  }
+
+  &-wrapper {
+    position: fixed;
+    left: 16vw;
+    top: 24vh;
+    width: 65vw;
+    height: 40vh;
+    background-color: #353b48;
+    z-index: 10;
+    border-radius: 2vw;
+    padding: 2vh 1.5vw;
+    box-shadow: 8px 4px 18px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  &-heading {
+    display: block;
+    font-size: 6vw;
+    margin-bottom: 5vh;
+    font-weight: 500;
+  }
+
+  &-selection {
+    padding-left: 4vw;
+    display: block;
+
+    & td {
+      width: 30vw;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3vw;
+    width: 3vw;
+    background-color: transparent;
+    border: 2px solid #dcdde1;
+    border-radius: 1vw;
+
+    &-container {
+      display: inline-block;
+      position: relative;
+      user-select: none;
+      padding-left: 5vw;
+      height: 4.5vw;
+      margin-top: 1.5vh;
+      cursor: pointer;
+      overflow: visible;
+    }
+
+    &-checked {
+      background-color: #2196f3;
+      width: 1.8vw;
+      height: 1.8vw;
+      display: block;
+      margin-left: 0.6vw;
+      margin-top: 0.6vw;
+      border-radius: 0.4vw;
+
+      &-disabled {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    &-descriptor {
+      font-size: 3.5vw;
+      vertical-align: 2vh;
+    }
+  }
+}

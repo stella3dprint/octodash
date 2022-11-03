@@ -1,0 +1,23 @@
+.control {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.top-bar {
+  &__next-icon {
+    vertical-align: -3vh;
+  }
+}
+
+app-custom-actions {
+  float: right;
+  height: 75vh;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

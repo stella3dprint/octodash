@@ -1,0 +1,20 @@
+<table class="top-bar">
+  <tr>
+    <td class="top-bar__back" routerLink="/main-screen">
+      <span matRipple [matRippleUnbounded]="true" [matRippleCentered]="true">
+        <!-- STELLAMOVE -->
+        <img src="assets/back.svg" alt="" class="top-bar__back-icon" />
+        <span i18n="@@control-back" class="top-bar__back">back</span>
+      </span>
+    </td>
+    <td class="top-bar__center">
+      <!-- STELLAMOVE -->
+      <img src="assets/config.svg" alt="" class="top-bar__center-icon" />
+    </td>
+    <td class="top-bar__next"></td>
+  </tr>
+</table>
+
+<div class="control">
+  <app-custom-actions [redirectActive]="false"></app-custom-actions>
+</div>

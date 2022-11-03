@@ -1,0 +1,42 @@
+<div class="i-frame" id="iFrame">
+  <span i18n="@@website-loading">loading website ...</span>
+  <iframe class="i-frame__content" [src]="iFrameURL | url" onerror="doActionConfirm()" allow="fullscreen; camera;" i18n="@@should-not-happen">
+    That shouldn't happen ...
+  </iframe>
+  <!-- STELLAMOVE -->
+  <img src="assets/error.svg" alt="" class="i-frame__close" (click)="hideIFrame()" />
+</div>
+
+<div class="custom-actions">
+  <div
+    class="custom-actions__action"
+    *ngFor="let customAction of customActions"
+    [style.border-color]="customAction.color"
+    (click)="doAction(customAction.command, customAction.exit, customAction.confirm)"
+    matRipple
+    [matRippleUnbounded]="false"
+  >
+    <fa-icon
+      [icon]="['fas', customAction.icon]"
+      class="custom-actions__action-icon"
+      [styles]="{ color: customAction.color }"
+    ></fa-icon>
+  </div>
+</div>
+
+<div class="confirm__wrapper" *ngIf="actionToConfirm">
+  <div class="confirm">
+    <h1 i18n="@@are-you-sure">are you sure?</h1>
+    <p class="confirm__sub-heading" i18n="@@confirm-exec">do you want to execute the following command?</p>
+    <p class="confirm__gcode">{{ actionToConfirm.command }}</p>
+    <!-- STELLAMOVE -->
+    <img
+      class="confirm__icon"
+      src="assets/confirm-small.svg"
+      alt=""
+      (click)="doAction(actionToConfirm.command, actionToConfirm.exit, false)"
+    />
+    <!-- STELLAMOVE -->
+    <img class="confirm__icon" src="assets/cancel-small.svg" alt="" (click)="hideConfirm()" />
+  </div>
+</div>

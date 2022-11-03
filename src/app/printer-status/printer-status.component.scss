@@ -1,0 +1,147 @@
+.printer-status {
+  width: 100%;
+  margin-top: 5vh;
+  height: 25vh;
+  display: block;
+  table-layout: fixed;
+  overflow: visible;
+
+  & tr {
+    vertical-align: middle;
+  }
+
+  &__value {
+    text-align: right;
+    height: 12vh;
+    vertical-align: middle;
+
+    & img {
+      width: 10vw;
+      float: left;
+      padding-top: 1.7vh;
+      padding-right: 2vw;
+      padding-bottom: 2vh;
+    }
+
+    &-1 {
+      width: 38vw;
+      padding-left: 0.4vw;
+      padding-right: 7.5vw;
+
+      & img {
+        padding-left: 1.6vw;
+        padding-right: 1vw;
+      }
+    }
+
+    &-2 {
+      width: 38vw;
+      padding-right: 6vw;
+    }
+
+    &-3 {
+      width: 38vw;
+      padding-left: 0.4vw;
+      padding-right: 7.5vw;
+
+      & img {
+        padding-left: 1.6vw;
+        padding-right: 1vw;
+      }
+    }
+
+    &-4 {
+      width: 38vw;
+      padding-right: 6vw;
+    }
+  }
+
+  &__unit {
+    font-size: 50%;
+  }
+
+  &__actual-value {
+    font-size: 6vw;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  &__set-value {
+    display: block;
+    text-align: right;
+  }
+
+  &__no-set-value {
+    overflow: visible;
+
+    & span {
+      margin-bottom: -3vh;
+    }
+
+    & img {
+      margin-top: 0;
+    }
+  }
+}
+
+.quick-control {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: opacity 0.4s ease-in-out;
+  z-index: 10;
+  opacity: 0;
+
+  &__controller {
+    width: 35vw;
+    margin: 0 auto;
+    border: solid 0.6vw;
+    border-radius: 3vw;
+    margin-top: 1.5vh;
+
+    &-row {
+      display: flex;
+    }
+
+    &-value {
+      padding: 3vh 6vw;
+      font-size: 8vw;
+      font-weight: 500;
+      text-align: center;
+
+      &-unit {
+        text-align: center;
+        font-size: 4vw;
+        font-weight: 400;
+      }
+    }
+
+    &-increase {
+      padding: 3vh 6vw;
+      font-weight: 500;
+      flex: 1;
+    }
+
+    &-decrease {
+      padding: 3vh 6vw;
+      font-weight: 500;
+      flex: 1;
+    }
+
+    &-set {
+      height: 10vw;
+      border-top: solid 0.6vw;
+      flex: 1;
+      align-items: center;
+      display: flex;
+
+      &-span {
+        text-align: center;
+        flex: 1;
+      }
+    }
+  }
+}
