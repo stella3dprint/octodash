@@ -255,13 +255,11 @@ export class PrintControlComponent implements OnInit, OnDestroy {
   }
 
   public changeSlowFeedrate(): void {
-    this.printerService.setFeedrate(50);
-    console.log("Slow");
+    this.printerService.setFeedrate(10);
   }
 
   public changeNormalFeedrate(): void {
     this.printerService.setFeedrate(100);
-    console.log("Normal");
   }
 
   public saveOffset(event: MouseEvent): void {
