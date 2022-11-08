@@ -10,6 +10,8 @@ import { FilamentService } from '../services/filament/filament.service';
 import { PrinterService } from '../services/printer/printer.service';
 import { SocketService } from '../services/socket/socket.service';
 
+import { EventService } from '../event.service';
+
 @Component({
   selector: 'app-filament',
   templateUrl: './filament.component.html',
@@ -17,8 +19,9 @@ import { SocketService } from '../services/socket/socket.service';
   providers: [FilamentService],
 })
 export class FilamentComponent implements OnInit, OnDestroy {
-  private totalPages = 5;
+  private totalPages = 1;
   private hotendPreviousTemperature = 0;
+  private printstateInterval: ReturnType<typeof setInterval>;
 
   public page: number;
   public showCheckmark = false;
@@ -34,6 +37,7 @@ export class FilamentComponent implements OnInit, OnDestroy {
     private printerService: PrinterService,
     private socketService: SocketService,
     private filament: FilamentService,
+    private eventService: EventService,
   ) {
     this.socketService
       .getPrinterStatusSubscribable()
@@ -49,31 +53,19 @@ export class FilamentComponent implements OnInit, OnDestroy {
     } else {
       this.setPage(1);
     }
-  }
+}
 
   public ngOnDestroy(): void {
     this.printerService.setTemperatureHotend(this.hotendPreviousTemperature);
   }
 
   public increasePage(returnToMainScreen = false): void {
-    if (this.page === this.totalPages || returnToMainScreen) {
-      this.router.navigate(['/main-screen']);
-    } else if (this.page < this.totalPages) {
-      this.setPage(this.page + 1);
-    }
-  }
-
-  public decreasePage(): void {
-    if (this.page === 0) {
-      this.router.navigate(['/main-screen']);
-    } else if (this.page === 1 && this.configService.isFilamentManagerUsed()) {
-      this.setPage(0);
-    } else if (this.page === 1) {
-      this.router.navigate(['/main-screen']);
-    } else if (this.page === 2 || this.page === 3) {
-      this.setPage(1);
-    } else if (this.page === 4 || this.page === 5) {
-      this.setPage(3);
+    if (this.eventService.isPrintingState()) {
+      if (this.page === this.totalPages || returnToMainScreen) {
+        this.router.navigate(['/main-screen']);
+      } else if (this.page < this.totalPages) {
+        this.setPage(this.page + 1);
+      }
     }
   }
 

@@ -6,6 +6,8 @@ import { PrinterStatus } from '../model';
 import { PrinterService } from '../services/printer/printer.service';
 import { SocketService } from '../services/socket/socket.service';
 
+import { Global } from '../print-control/print-control.component';
+
 @Component({
   selector: 'app-printer-status',
   templateUrl: './printer-status.component.html',
@@ -14,14 +16,13 @@ import { SocketService } from '../services/socket/socket.service';
 export class PrinterStatusComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription = new Subscription();
   public printerStatus: PrinterStatus;
-  public feedRate: number;
-  public flowRate: number;
   public fanSpeed: number;
   public status: string;
 
   public hotendTarget: number;
   public heatbedTarget: number;
   public feedTarget: number;
+  public feedVTarget: number;
   public flowTarget: number;
   public fanTarget: number;
 
@@ -203,19 +204,27 @@ export class PrinterStatusComponent implements OnInit, OnDestroy {
 
   private setFeedRate(): void {
     this.printerService.setFeedrate(this.feedTarget);
-    this.feedRate = this.feedTarget;
+    Global.feedVal = this.feedTarget;
     this.hideQuickControl();
   }
 
   private setFlowRate(): void {
     this.printerService.setFlowrate(this.flowTarget);
-    this.flowRate = this.flowTarget;
+    Global.flowVal = this.flowTarget;
     this.hideQuickControl();
   }
 
   private setFanSpeed(): void {
     this.printerService.setFanSpeed(this.fanTarget);
     this.hideQuickControl();
+  }
+
+  public getFeedSpeed(): number {
+    return Global.feedVal;
+  }
+
+  public getFlowSpeed(): number {
+    return Global.flowVal;
   }
 }
 

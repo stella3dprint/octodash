@@ -50,14 +50,12 @@ export class FilesComponent {
   public openFolder(folderPath: string): void {
     // STELLAMOVE
     this.printerService.relaseSD();
-    this.printerService.initSD();
-    //setTimeout((): void => {
-    //  this.printerService.initSD();
-    //}, 50);
+    setTimeout((): void => {
+      this.printerService.initSD();
+    }, 200);
     setTimeout((): void => {
       this.printerService.refreshSD();
-    }, 100);
-    //this.printerService.refreshSD();
+    }, 600);
 
     folderPath = folderPath === '' ? '/' : folderPath;
     setTimeout((): void => {

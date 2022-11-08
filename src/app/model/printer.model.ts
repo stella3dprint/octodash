@@ -2,8 +2,6 @@ export interface PrinterStatus {
   status: PrinterState;
   bed: Temperature;
   tool0: Temperature;
-  feedRate: number;
-  flowRate: number;
   fanSpeed: number;
 }
 

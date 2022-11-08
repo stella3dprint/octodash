@@ -44,7 +44,7 @@
       <!-- STELLAMOVE -->
       <img src="assets/speed.svg" alt="" />
       <span class="printer-status__actual-value">
-        {{ this.feedTarget > 0 ? this.feedTarget : '--- ' }}<span class="printer-status__unit">%</span>
+        {{ getFeedSpeed() > 0 ? getFeedSpeed() : '--- ' }}<span class="printer-status__unit">%</span>
       </span>
     </td>
     <td
@@ -56,7 +56,7 @@
       <!-- STELLAMOVE -->
       <img src="assets/flow.svg" alt="" />
       <span class="printer-status__actual-value">
-        {{ this.flowTarget > 0 ? this.flowTarget : '--- ' }}<span class="printer-status__unit">%</span>
+        {{ getFlowSpeed() > 0 ? getFlowSpeed() : '--- ' }}<span class="printer-status__unit">%</span>
       </span>
     </td>
     <!--

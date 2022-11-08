@@ -86,7 +86,11 @@
             <fa-icon
               [icon]="['fas', 'caret-up']"
               class="print-control__adjust__controller-increase"
-              (click)="changeTemperatureHotend(1)"
+              long-press
+              [duration]="650"
+              [frequency]="150"
+              (onShortPress)="changeTemperatureHotend(1)"
+              (onLongPressing)="changeTemperatureHotend(5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -96,8 +100,12 @@
             </div>
             <fa-icon
               [icon]="['fas', 'caret-down']"
-              class="print-control__adjust__controller-decrease"
-              (click)="changeTemperatureHotend(-1)"
+              class="print-control__adjust__controller-increase"
+              long-press
+              [duration]="650"
+              [frequency]="150"
+              (onShortPress)="changeTemperatureHotend(-1)"
+              (onLongPressing)="changeTemperatureHotend(-5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -109,7 +117,11 @@
             <fa-icon
               [icon]="['fas', 'caret-up']"
               class="print-control__adjust__controller-increase"
-              (click)="changeTemperatureHeatbed(1)"
+              long-press
+              [duration]="650"
+              [frequency]="150"
+              (onShortPress)="changeTemperatureHeatbed(1)"
+              (onLongPressing)="changeTemperatureHeatbed(5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -119,8 +131,12 @@
             </div>
             <fa-icon
               [icon]="['fas', 'caret-down']"
-              class="print-control__adjust__controller-decrease"
-              (click)="changeTemperatureHeatbed(-1)"
+              class="print-control__adjust__controller-increase"
+              long-press
+              [duration]="650"
+              [frequency]="150"
+              (onShortPress)="changeTemperatureHeatbed(-1)"
+              (onLongPressing)="changeTemperatureHeatbed(-5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -134,7 +150,11 @@
             <fa-icon
               [icon]="['fas', 'caret-up']"
               class="print-control__adjust__controller-increase"
-              (click)="changeFeedrate(5)"
+              long-press
+              [duration]="650"
+              [frequency]="200"
+              (onShortPress)="changeFeedrate(1)"
+              (onLongPressing)="changeFeedrate(5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -146,7 +166,11 @@
             <fa-icon
               [icon]="['fas', 'caret-down']"
               class="print-control__adjust__controller-decrease"
-              (click)="changeFeedrate(-5)"
+              long-press
+              [duration]="650"
+              [frequency]="200"
+              (onShortPress)="changeFeedrate(-1)"
+              (onLongPressing)="changeFeedrate(-5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -159,7 +183,11 @@
             <fa-icon
               [icon]="['fas', 'caret-up']"
               class="print-control__adjust__controller-increase"
-              (click)="changeFlowrate(1)"
+              long-press
+              [duration]="650"
+              [frequency]="150"
+              (onShortPress)="changeFlowrate(1)"
+              (onLongPressing)="changeFlowrate(5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>
@@ -170,7 +198,11 @@
             <fa-icon
               [icon]="['fas', 'caret-down']"
               class="print-control__adjust__controller-decrease"
-              (click)="changeFlowrate(-1)"
+              long-press
+              [duration]="650"
+              [frequency]="150"
+              (onShortPress)="changeFlowrate(-1)"
+              (onLongPressing)="changeFlowrate(-5)"
               matRipple
               [matRippleUnbounded]="false"
             ></fa-icon>

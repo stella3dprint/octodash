@@ -9,6 +9,11 @@ import { JobService } from '../services/job/job.service';
 import { PrinterService } from '../services/printer/printer.service';
 import { SocketService } from '../services/socket/socket.service';
 
+export namespace Global {
+  export var feedVal: number = 100;
+  export var flowVal: number = 100;
+}
+
 @Component({
   selector: 'app-print-control',
   templateUrl: './print-control.component.html',
@@ -39,8 +44,8 @@ export class PrintControlComponent implements OnInit, OnDestroy {
   ) {
     this.temperatureHotend = 0;
     this.temperatureHeatbed = 0;
-    this.feedrate = 100;
-    this.flowrate = 100;
+    this.feedrate = Global.feedVal;
+    this.flowrate = Global.flowVal;
     this.fanSpeed = 0;
     this.zOffset = 0;
     this.zOffsetStep = 0;
@@ -249,7 +254,9 @@ export class PrintControlComponent implements OnInit, OnDestroy {
       this.printerService.setTemperatureHotend(this.temperatureHotend);
       this.printerService.setTemperatureBed(this.temperatureHeatbed);
       this.printerService.setFeedrate(this.feedrate);
-      this.printerService.setFlowrate(this.feedrate);
+      Global.feedVal = this.feedrate;
+      this.printerService.setFlowrate(this.flowrate);
+      Global.flowVal = this.flowrate;
       this.hideControlOverlay(event);
     }
   }
@@ -265,6 +272,7 @@ export class PrintControlComponent implements OnInit, OnDestroy {
   public saveOffset(event: MouseEvent): void {
     if (this.showControls) {
       this.printerService.saveToEPROM();
+      this.zOffset = 0;
       this.stopPropagation(event);
     }
   }

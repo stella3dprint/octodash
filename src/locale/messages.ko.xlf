@@ -610,7 +610,7 @@
       </trans-unit>
       <trans-unit id="filament-done" datatype="html">
         <source> done </source>
-        <target state="translated"> 완료 </target>
+        <target state="translated"> 확인 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
           <context context-type="linenumber">26,28</context>
@@ -618,7 +618,7 @@
       </trans-unit>
       <trans-unit id="filament-waiting" datatype="html">
         <source>I'll wait for you.</source>
-        <target state="translated">팝업 메뉴가 표시될때까지 대기</target>
+        <target state="translated">출력이 다시 시작되면 확인 버튼을 클릭해주세요.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
           <context context-type="linenumber">33</context>
@@ -626,7 +626,7 @@
       </trans-unit>
       <trans-unit id="filament-m600" datatype="html">
         <source>M600 sent</source>
-        <target state="translated">M600 전송</target>
+        <target state="translated">필라멘트 교체</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
           <context context-type="linenumber">38</context>
@@ -634,7 +634,7 @@
       </trans-unit>
       <trans-unit id="follow-printer-screen" datatype="html">
         <source>follow the instructions on your printers' display</source>
-        <target state="translated">필라멘트 교체를 위해 작업을 진행합니다.</target>
+        <target state="translated">필라멘트 교체를 위해 작업을 진행합니다. 화면에 표시되는 단계별 팝업 메뉴에 따라 진행해주시기 바랍니다.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/filament/change-filament/change-filament.component.html</context>
           <context context-type="linenumber">40</context>
@@ -778,7 +778,7 @@
       </trans-unit>
       <trans-unit id="purging-done" datatype="html">
         <source>done</source>
-        <target state="translated">완료</target>
+        <target state="translated">Purge 완료</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/filament/purge-filament/purge-filament.component.html</context>
           <context context-type="linenumber">18</context>
@@ -1236,7 +1236,7 @@
       </trans-unit>
       <trans-unit id="adjust-hotend" datatype="html">
         <source>Hotend</source>
-        <target state="translated">핫엔드</target>
+        <target state="translated">노즐</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
           <context context-type="linenumber">93</context>
@@ -1244,7 +1244,7 @@
       </trans-unit>
       <trans-unit id="adjust-heatbed" datatype="html">
         <source>Heatbed</source>
-        <target state="translated">핫베드</target>
+        <target state="translated">베드</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
           <context context-type="linenumber">118</context>
@@ -1252,7 +1252,7 @@
       </trans-unit>
       <trans-unit id="adjust-feedrate" datatype="html">
         <source>Feed Rate</source>
-        <target state="translated">출력속도</target>
+        <target state="translated">속도</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
           <context context-type="linenumber">143</context>
@@ -1260,7 +1260,7 @@
       </trans-unit>
       <trans-unit id="adjust-flowrate" datatype="html">
         <source>Flow Rate</source>
-        <target state="translated">토출속도</target>
+        <target state="translated">밀도</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
           <context context-type="linenumber">168</context>
@@ -1300,7 +1300,7 @@
       </trans-unit>
       <trans-unit id="offset-save" datatype="html">
         <source> save </source>
-        <target state="translated"> 옵셋저장 </target>
+        <target state="translated"> 저장 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/print-control/print-control.component.html</context>
           <context context-type="linenumber">184,186</context>

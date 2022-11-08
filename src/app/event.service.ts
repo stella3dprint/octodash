@@ -11,6 +11,7 @@ export class EventService implements OnDestroy {
   private subscriptions: Subscription = new Subscription();
 
   private printing = false;
+  private printingState = false;
 
   public constructor(
     private socketService: SocketService,
@@ -33,6 +34,16 @@ export class EventService implements OnDestroy {
       }, 1000);
     }
 
+    if (event === PrinterEvent.PRINTING) {
+      setTimeout(() => {
+        this.printingState = true;
+      }, 500);
+    } else {
+      setTimeout(() => {
+        this.printingState = false;
+      }, 1000);
+    }
+
     if (event === PrinterEvent.CLOSED) {
       this.router.navigate(['/standby']);
     } else if (event === PrinterEvent.CONNECTED) {
@@ -52,5 +63,9 @@ export class EventService implements OnDestroy {
 
   public isPrinting(): boolean {
     return this.printing;
+  }
+
+  public isPrintingState(): boolean {
+    return this.printingState;
   }
 }

@@ -34,14 +34,14 @@
   }
 
   &__heading {
-    padding: 3vh 0;
+    padding: 4vh 0;
     display: block;
     font-weight: 500;
-    font-size: 6.5vw;
+    font-size: 8vw;
 
     &-2 {
       display: block;
-      font-size: 5.0vw;
+      font-size: 6.0vw;
       font-weight: 500;
       margin-bottom: 1.2vh;
       margin-top: 3vh;
@@ -146,14 +146,14 @@
       display: inline-block;
       position: relative;
       user-select: none;
-      padding-left: 5vw;
+      padding-left: 6vw;
       height: 4.5vw;
       margin-top: 1.4vh;
       cursor: pointer;
       overflow: visible;
 
       &__space-right {
-        margin-right: 14vw;
+        margin-right: 20vw;
       }
 
       &-disabled {
@@ -197,7 +197,7 @@
     }
 
     & li {
-      font-size: 3vw;
+      font-size: 6vw;
       padding: 2vh 0;
     }
   }
@@ -205,11 +205,11 @@
   &__save {
     display: block;
     text-align: center;
-    margin: 17vh 0;
+    margin: 10vh 0;
   }
 
   &__scroll {
-    height: 63vh;
+    height: 60vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     padding-right: 2vw;
@@ -219,7 +219,7 @@
   &__content {
     position: absolute;
     left: 0;
-    width: 74vw;
+    width: 75vw;
     display: block;
     padding: 2vh 2vw 2vh 4vw;
 
@@ -261,7 +261,7 @@
   }
 
   &__update-available {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     display: block;
     margin-top: -1vh;
     margin-bottom: -2.5vh;
@@ -269,7 +269,7 @@
 
   &__about {
     &-icon {
-      height: 30vh;
+      height: 25vh;
       margin: auto;
       display: block;
     }

@@ -16,7 +16,7 @@ export const defaultConfig: Config = {
     defaultFlowRate: 100,
     defaultTemperatureFanSpeed: {
       hotend: 200,
-      heatbed: 40,
+      heatbed: 50,
       fan: 100,
     },
   },

@@ -22,11 +22,12 @@
     text-align: center;
     font-weight: 500;
     font-size: 5vw;
-    padding: 30vh 4vw;
+    padding: 1vh 4vw;
     z-index: 51;
 
     &:first-of-type {
       margin-left: 5vw;
+      margin-top: 25vh;
     }
 
     &:last-of-type {
@@ -206,9 +207,9 @@
     &__zoffset_name {
       margin-top: 2vh;
       margin-bottom: 2vh;
-      margin-left: 4vw;
+      margin-left: 6vw;
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
 
     &__zoffset_controller {
