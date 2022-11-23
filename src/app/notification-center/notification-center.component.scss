@@ -33,14 +33,18 @@
 }
 
 .noti-pane {
-  width: 100%;
-  padding-left: 3vw;
+  width: 90vw;
+  padding-left: 5vw;
 }
 
 .time {
   font-size: 10vw;
   display: block;
   padding-bottom: 5vh;
+}
+
+.notifications {
+  height: 66vh;
 }
 
 .no-notifications {
@@ -52,24 +56,25 @@
 
 .notification {
   display: block;
-  width: 64vw;
+  width: 85vw;
   background-color: #5a6675;
   border-radius: 1.3vw;
   box-shadow: 0 4px 10px -3px rgba(0, 0, 0, 0.75);
   border-right: 1vw solid #5a6675;
   margin-bottom: 3vh;
+  margin-left: 1.5vw;
   position: relative;
 
   &__heading {
     display: block;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: 4vw;
     font-weight: 500;
     margin-top: 3vh;
   }
 
   &__text {
-    font-size: 2.7vw;
+    font-size: 3.5vw;
     padding: 3.5vh 3vw 1vh;
     display: block;
     text-align: center;
@@ -77,9 +82,9 @@
 
   &__time {
     position: absolute;
-    right: 0.3vw;
+    right: 1.5vw;
     top: 0.6vw;
-    font-size: 2.4vw;
+    font-size: 2.5vw;
     opacity: 0.6;
   }
 

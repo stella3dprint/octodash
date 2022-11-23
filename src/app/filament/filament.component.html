@@ -1,17 +1,7 @@
 <div class="filament">
-  <app-filament-choose (spoolChange)="setSpool($event)" *ngIf="page === 0 && !showCheckmark"></app-filament-choose>
-
   <app-filament-change-filament
     *ngIf="page === 1"
     (increasePage)="increasePage()"
     [selectedSpool]="selectedSpool"
   ></app-filament-change-filament>
-
-  <div class="checkmark" *ngIf="showCheckmark">
-    <ng-lottie
-      id="checkmarkAnimation"
-      [options]="checkmarkOptions"
-      (animationCreated)="setAnimationSpeed($event)"
-    ></ng-lottie>
-  </div>
 </div>

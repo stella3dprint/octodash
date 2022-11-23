@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import _ from 'lodash-es';
+import _, { method } from 'lodash-es';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
@@ -27,7 +27,7 @@ export class FilesOctoprintService implements FilesService {
   public getFolderContent(folderPath?: string): Observable<Directory> {
     return this.http
       .get(
-        this.configService.getApiURL('files' + (folderPath === '/' ? '' : folderPath)),
+        this.configService.getApiURL('files' + (folderPath === '/' ? '' + '?recursive=true&force=true' : folderPath)),
         this.configService.getHTTPHeaders(),
       )
       .pipe(
@@ -40,7 +40,6 @@ export class FilesOctoprintService implements FilesService {
         }),
         map((folderContent: Array<OctoprintFile & OctoprintFolder>) => {
           const directory: Directory = { files: [], folders: [] };
-
           folderContent.forEach(fileOrFolder => {
             if (fileOrFolder.type === 'folder') {
               directory.folders.push({
@@ -110,7 +109,6 @@ export class FilesOctoprintService implements FilesService {
               directory.files = [];
             }
           }
-
           return directory;
         }),
       );

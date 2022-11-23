@@ -21,7 +21,6 @@ import { EventService } from '../event.service';
 export class FilamentComponent implements OnInit, OnDestroy {
   private totalPages = 1;
   private hotendPreviousTemperature = 0;
-  private printstateInterval: ReturnType<typeof setInterval>;
 
   public page: number;
   public showCheckmark = false;
@@ -33,11 +32,9 @@ export class FilamentComponent implements OnInit, OnDestroy {
 
   public constructor(
     private router: Router,
-    private configService: ConfigService,
     private printerService: PrinterService,
     private socketService: SocketService,
     private filament: FilamentService,
-    private eventService: EventService,
   ) {
     this.socketService
       .getPrinterStatusSubscribable()
@@ -48,24 +45,18 @@ export class FilamentComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    if (this.configService.isFilamentManagerUsed()) {
-      this.setPage(0);
-    } else {
-      this.setPage(1);
-    }
-}
+    this.setPage(1);
+  }
 
   public ngOnDestroy(): void {
     this.printerService.setTemperatureHotend(this.hotendPreviousTemperature);
   }
 
   public increasePage(returnToMainScreen = false): void {
-    if (this.eventService.isPrintingState()) {
-      if (this.page === this.totalPages || returnToMainScreen) {
-        this.router.navigate(['/main-screen']);
-      } else if (this.page < this.totalPages) {
-        this.setPage(this.page + 1);
-      }
+    if (this.page === this.totalPages || returnToMainScreen) {
+      this.router.navigate(['/main-screen']);
+    } else if (this.page < this.totalPages) {
+      this.setPage(this.page + 1);
     }
   }
 

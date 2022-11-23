@@ -165,8 +165,10 @@ export class PrintControlComponent implements OnInit, OnDestroy {
   }
 
   public changeFilament(event: MouseEvent): void {
-    this.router.navigate(['/filament']);
-    this.stopPropagation(event);
+    if (this.showControls && this.view === ControlView.PAUSE) {
+      this.printerService.executeGCode('M600');
+      this.hideControlOverlay(event);
+    }
   }
 
   public backToControlScreen(event: MouseEvent): void {

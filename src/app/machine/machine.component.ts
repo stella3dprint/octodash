@@ -65,7 +65,7 @@ export class MachineComponent {
   }
 
   public alignZ(): void {
-    this.printerService.executeGCode("G34 I3 T0.05");
+    this.printerService.executeGCode("G34 I3 T0.1");
   }
 
   public leveling(): void {

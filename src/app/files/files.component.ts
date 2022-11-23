@@ -52,16 +52,15 @@ export class FilesComponent {
     this.printerService.relaseSD();
     setTimeout((): void => {
       this.printerService.initSD();
-    }, 200);
-    setTimeout((): void => {
-      this.printerService.refreshSD();
-    }, 600);
+    }, 0);
+    //setTimeout((): void => {
+    //  this.printerService.refreshSD();
+    //}, 150);
 
     folderPath = folderPath === '' ? '/' : folderPath;
     setTimeout((): void => {
       this.showLoader();
       this.directory = { files: [], folders: [] };
-
       this.filesService.getFolderContent(folderPath).subscribe({
         next: (directory: Directory) => {
           this.directory = directory;
@@ -70,7 +69,7 @@ export class FilesComponent {
           if (
             folderPath === '/' &&
             mergedDirectory.length > 0 &&
-            !(mergedDirectory[0]?.origin === 'local' && mergedDirectory[1]?.origin === 'sdcard')
+            !(mergedDirectory[0]?.name === 'local' && mergedDirectory[1]?.name === 'sdcard')
           ) {
             this.currentFolder = mergedDirectory[0]?.path.startsWith('/sdcard') ? '/sdcard' : '/local';
             this.homeFolder = this.currentFolder;
@@ -92,7 +91,7 @@ export class FilesComponent {
           this.hideLoader();
         },
       });
-    }, 300);
+    }, 800);
   }
 
   public setSortAttribute(attribute: 'name' | 'date' | 'size'): void {
