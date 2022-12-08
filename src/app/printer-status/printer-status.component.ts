@@ -143,8 +143,8 @@ export class PrinterStatusComponent implements OnInit, OnDestroy {
       this.hotendTarget = this.configService.getDefaultHotendTemperature();
     } else if (this.hotendTarget < 0) {
       this.hotendTarget = 0;
-    } else if (this.hotendTarget > 300) {
-      this.hotendTarget = 300;
+    } else if (this.hotendTarget > 260) {
+      this.hotendTarget = 260;
     }
   }
 
@@ -154,8 +154,8 @@ export class PrinterStatusComponent implements OnInit, OnDestroy {
       this.heatbedTarget = this.configService.getDefaultHeatbedTemperature();
     } else if (this.heatbedTarget < 0) {
       this.heatbedTarget = 0;
-    } else if (this.heatbedTarget > 150) {
-      this.heatbedTarget = 150;
+    } else if (this.heatbedTarget > 80) {
+      this.heatbedTarget = 80;
     }
   }
 

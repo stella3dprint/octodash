@@ -208,8 +208,8 @@ export class PrintControlComponent implements OnInit, OnDestroy {
       if (this.temperatureHeatbed < 0) {
         this.temperatureHeatbed = 0;
       }
-      if (this.temperatureHeatbed > 100) {
-        this.temperatureHeatbed = 100;
+      if (this.temperatureHeatbed > 80) {
+        this.temperatureHeatbed = 80;
       }
     }
   }
