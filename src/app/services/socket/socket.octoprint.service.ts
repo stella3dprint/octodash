@@ -44,6 +44,8 @@ export class OctoPrintSocketService implements SocketService {
   private jobStatus: JobStatus;
   private lastState: PrinterEvent;
   private NotiText: string;
+  // STELLAMOVE
+  private progressTime: number;
 
   public constructor(
     private configService: ConfigService,
@@ -278,7 +280,11 @@ export class OctoPrintSocketService implements SocketService {
 
     this.jobStatus.file = file;
     this.jobStatus.fullPath = '/' + message?.current?.job?.file?.origin + '/' + message?.current?.job?.file?.path;
-    this.jobStatus.progress = Math.round(message?.current?.progress?.completion);
+    // STELLAMOVE
+    this.progressTime = message?.current?.progress?.printTime*100 / (message?.current?.progress?.printTime + message?.current?.progress?.printTimeLeft);
+    this.progressTime = isNaN(this.progressTime) ? 0 : this.progressTime;
+    this.jobStatus.progress = Math.round(this.progressTime);
+    //this.jobStatus.progress = Math.round(message?.current?.progress?.completion);
     this.jobStatus.timePrinted = {
       value: this.conversionService.convertSecondsToHours(message.current.progress.printTime),
       unit: $localize`:@@unit-h-1:h`,
