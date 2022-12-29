@@ -55,7 +55,8 @@ export class OctoPrintSocketService implements SocketService {
     this.printerStatusSubject = new ReplaySubject<PrinterStatus>(1);
     this.jobStatusSubject = new Subject<JobStatus>();
     this.eventSubject = new ReplaySubject<PrinterEvent>(5);
-    this.statusTextSubject = new ReplaySubject<string>(1);
+    // STELLAMOVE
+    this.statusTextSubject = new ReplaySubject<string>(1,3000);
   }
 
   //==== SETUP & AUTH ====//
@@ -240,7 +241,8 @@ export class OctoPrintSocketService implements SocketService {
         unit: '°C',
       };
     }
-    this.printerStatus.status = PrinterState[message.current.state.text.toLowerCase()];
+    // STELLAMOVE
+    this.printerStatus.status = PrinterState[message.current.state.text.toLowerCase().split(" ")[0]];
 
     if (this.printerStatus.status === PrinterState.printing && this.lastState !== PrinterEvent.PRINTING) {
       this.extractPrinterEvent({
